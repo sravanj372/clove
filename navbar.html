@@ -1,0 +1,4117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .navigation-container {
+          background-color: #fff1e6;
+          display: flex;
+          align-items: center;
+          gap: 40px 170px;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          padding: 16px 108px;
+          font: 22px Raleway, sans-serif;
+        }
+        .logo {
+          aspect-ratio: 2.49;
+          object-fit: contain;
+          object-position: center;
+          width: 199px;
+          align-self: stretch;
+          margin: auto 0;
+        }
+        .nav-content {
+          align-self: stretch;
+          display: flex;
+          min-width: 240px;
+          align-items: center;
+          gap: 40px 60px;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          margin: auto 0;
+        }
+        .nav-links {
+          align-self: stretch;
+          display: flex;
+          min-width: 240px;
+          min-height: 57px;
+          align-items: center;
+          gap: 20px;
+          color: #464646;
+          font-weight: 500;
+          justify-content: flex-end;
+          width: 768px;
+          margin: auto 0;
+        }
+        .nav-item {
+          align-self: stretch;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          white-space: nowrap;
+          justify-content: center;
+          margin: auto 0;
+          padding: 20px 0;
+        }
+        .nav-text {
+          align-self: stretch;
+          margin: auto 0;
+        }
+        .dropdown-icon {
+          aspect-ratio: 1.78;
+          object-fit: contain;
+          object-position: center;
+          width: 16px;
+          align-self: stretch;
+          margin: auto 0;
+        }
+        .nav-separator {
+          background-color: #4d2c19;
+          align-self: stretch;
+          width: 0;
+          height: 24px;
+          margin: auto 0;
+          border: 1px solid #4d2c19;
+        }
+        .action-buttons {
+          align-self: stretch;
+          display: flex;
+          min-width: 240px;
+          align-items: flex-start;
+          gap: 40px;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          margin: auto 0;
+        }
+        .book-appointment-btn {
+          display: flex;
+          min-width: 240px;
+          flex-direction: column;
+          overflow: hidden;
+          color: #fff;
+          font-weight: 600;
+          justify-content: center;
+          width: 289px;
+          padding: 1px 0;
+        }
+        .btn-content {
+          border-radius: 50px;
+          background-color: #f8943f;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          overflow: hidden;
+          justify-content: flex-start;
+          padding: 18px 24px;
+          border: 1px solid #de6f0d;
+        }
+        .btn-icon {
+          aspect-ratio: 0.94;
+          object-fit: contain;
+          object-position: center;
+          width: 30px;
+          align-self: stretch;
+          margin: auto 0;
+        }
+        .help-btn {
+          align-items: center;
+          border-radius: 70px;
+          border: 2px solid #fbbe9c;
+          background-color: #ffefe2;
+          display: flex;
+          gap: 16px;
+          color: #4d2c19;
+          font-weight: 500;
+          justify-content: flex-start;
+          width: 178px;
+          padding: 18px 20px;
+        }
+        .help-icon {
+          aspect-ratio: 0.58;
+          object-fit: contain;
+          object-position: center;
+          width: 19px;
+          align-self: stretch;
+          margin: auto 0;
+        }
+        .help-text {
+          align-self: stretch;
+          margin: auto 0;
+        }
+        .help-dropdown {
+          aspect-ratio: 1.75;
+          object-fit: contain;
+          object-position: center;
+          width: 21px;
+          align-self: stretch;
+          margin: auto 0;
+        }
+        @media (max-width: 991px) {
+          .navigation-container {
+            padding: 0 20px;
+          }
+          .nav-content,
+          .nav-links,
+          .action-buttons {
+            max-width: 100%;
+          }
+          .nav-item,
+          .nav-text {
+            white-space: initial;
+          }
+          .btn-content {
+            padding: 18px 20px;
+          }
+        }
+      </style>
+      
+      <nav class="navigation-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/973a96ddcb20a2eae073a2fadde03b19ad0777bfbe713ceb7ad2aa26d61441fd?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Company Logo" class="logo" />
+        <div class="nav-content">
+          <ul class="nav-links">
+            <li class="nav-item">
+              <span class="nav-text">Treatments</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3552fb214dba8a2078c8ee185aa6ee6363c77282747be68459bf16c157032edd?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="dropdown-icon" />
+            </li>
+            <li class="nav-separator" aria-hidden="true"></li>
+            <li class="nav-item">
+              <span class="nav-text">Dental Plans</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3552fb214dba8a2078c8ee185aa6ee6363c77282747be68459bf16c157032edd?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="dropdown-icon" />
+            </li>
+            <li class="nav-separator" aria-hidden="true"></li>
+            <li class="nav-item">
+              <span class="nav-text">Our Doctors</span>
+            </li>
+            <li class="nav-separator" aria-hidden="true"></li>
+            <li class="nav-item">
+              <span class="nav-text">Careers</span>
+            </li>
+            <li class="nav-separator" aria-hidden="true"></li>
+            <li class="nav-item">
+              <span class="nav-text">Find a Clinic</span>
+            </li>
+          </ul>
+          <div class="action-buttons">
+            <div class="book-appointment-btn">
+              <button class="btn-content">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a854d0ae62658685abd14dade6dab5039b68e9fcd2f4ed5891f1926d234d2f3?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="btn-icon" />
+                <span>Book Appointment</span>
+              </button>
+            </div>
+            <button class="help-btn">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fbb8e04c23a3be92803fc157e75382164e907ac3c0735ce9b712e29699659ad?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="help-icon" />
+              <span class="help-text">Help ?</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/46444f8e4b049404948a160b073dda39ee65afc5f2b0f35c8f14b9d352098814?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="help-dropdown" />
+            </button>
+          </div>
+        </div>
+      </nav>
+      <style>
+        .dental-plan-container { display: flex; flex-direction: column; overflow: hidden; }
+        .dental-plan-content { background-color: #b5c1a6; z-index: 10; width: 100%; overflow: hidden; padding: 115px 80px 0 0; }
+        .dental-plan-row { gap: 20px; display: flex; }
+        .dental-plan-info { display: flex; flex-direction: column; line-height: normal; width: 70%; margin-left: 0; }
+        .dental-plan-details { display: flex; width: 100%; flex-direction: column; margin: 34px -240px 0 0; }
+        .dental-plan-text { display: flex; flex-direction: column; justify-content: start; padding: 60px 240px 60px 150px; }
+        .dental-plan-title { display: flex; max-width: 100%; width: 985px; flex-direction: column; color: #303030; justify-content: start; font: 800 72px/1.1 Raleway, sans-serif; }
+        .dental-plan-subtitle { align-self: start; display: flex; margin-top: 40px; flex-direction: column; justify-content: start; }
+        .dental-plan-pricing { display: flex; flex-direction: column; justify-content: start; font: 700 40px/1.3 Open Sans, sans-serif; }
+        .dental-plan-price { color: #525252; }
+        .dental-plan-discount { color: #303030; margin-top: 30px; }
+        .dental-plan-cta { align-self: stretch; border-radius: 50px; background-color: #f8943f; margin-top: 60px; min-height: 72px; width: 400px; max-width: 100%; color: #fff; padding: 28px 55px; font: 500 24px Raleway, sans-serif; border: 1px solid #de6f0d; }
+        .dental-plan-indicators { align-self: end; display: flex; align-items: center; gap: 16px; justify-content: start; margin: 124px 307px 0 0; }
+        .indicator-active { border-radius: 10px; background-color: #4d2c19; align-self: stretch; width: 100px; height: 10px; margin: auto 0; }
+        .indicator-inactive { border-radius: 10px; background-color: #f8e4be; align-self: stretch; width: 100px; height: 6px; margin: auto 0; }
+        .dental-plan-image { display: flex; flex-direction: column; line-height: normal; width: 30%; margin-left: 20px; }
+        .dental-plan-img { aspect-ratio: 0.94; object-fit: contain; object-position: center; width: 100%; flex-grow: 1; }
+        .dental-plan-overlay { background-color: #c4c4c4; align-self: end; display: flex; margin-top: -730px; width: 0; flex-direction: column; overflow: hidden; align-items: start; }
+        .overlay-content { display: flex; padding-bottom: 97px; flex-direction: column; align-items: start; }
+        .overlay-img { object-fit: contain; object-position: center; width: 100%; }
+        .overlay-spacer { z-index: 10; display: flex; min-height: 445px; margin-top: -542px; padding: 60px 0; }
+        
+        @media (max-width: 991px) {
+          .dental-plan-content { max-width: 100%; padding: 100px 20px 0 0; }
+          .dental-plan-row { flex-direction: column; align-items: stretch; gap: 0; }
+          .dental-plan-info { width: 100%; }
+          .dental-plan-details { max-width: 100%; margin-top: 40px; }
+          .dental-plan-text { max-width: 100%; padding: 0 20px; }
+          .dental-plan-title { font-size: 40px; }
+          .dental-plan-subtitle { max-width: 100%; }
+          .dental-plan-pricing { max-width: 100%; }
+          .dental-plan-price { max-width: 100%; }
+          .dental-plan-cta { margin-top: 40px; padding: 0 20px; }
+          .dental-plan-indicators { margin: 40px 10px 0 0; }
+          .dental-plan-image { width: 100%; }
+          .dental-plan-img { max-width: 100%; margin-top: 40px; }
+          .dental-plan-overlay { margin-top: -200px; }
+          .overlay-spacer { margin-top: -200px; }
+        }
+        </style>
+        
+        <section class="dental-plan-container">
+          <div class="dental-plan-content">
+            <div class="dental-plan-row">
+              <div class="dental-plan-info">
+                <div class="dental-plan-details">
+                  <div class="dental-plan-text">
+                    <h1 class="dental-plan-title">Advance Dental Health Plan</h1>
+                    <div class="dental-plan-subtitle">
+                      <div class="dental-plan-pricing">
+                        <p class="dental-plan-price">Dental care worth ₹8,000/-</p>
+                        <p class="dental-plan-discount">only at ₹550/-</p>
+                      </div>
+                      <button class="dental-plan-cta">Buy Now</button>
+                    </div>
+                  </div>
+                  <div class="dental-plan-indicators">
+                    <div class="indicator-active" role="img" aria-label="Active indicator"></div>
+                    <div class="indicator-inactive" role="img" aria-label="Inactive indicator"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dental-plan-image">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c7b15b47997f118e8b3cb70d0a16920fc058b3420149a46132d7045d8f86f1bb?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="dental-plan-img" alt="Dental health plan illustration" />
+              </div>
+            </div>
+          </div>
+          <div class="dental-plan-overlay">
+            <div class="overlay-content">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2ae21a95081b663fb0dca9fa26a4c17f7d8ab23ec2861c5f22007bba916e889c?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="overlay-img" alt="Decorative overlay" />
+              <div class="overlay-spacer"></div>
+            </div>
+          </div>
+        </section>
+        <style>
+            .clinic-stats {
+              display: flex;
+              align-items: center;
+              gap: 40px 101px;
+              justify-content: flex-start;
+              flex-wrap: wrap;
+              padding: 60px 108px;
+              font-family: 'Open Sans', sans-serif;
+            }
+            
+            @media (max-width: 991px) {
+              .clinic-stats {
+                padding: 0 20px;
+              }
+            }
+            
+            .stats-container {
+              align-self: stretch;
+              display: flex;
+              min-width: 240px;
+              flex-direction: column;
+              overflow: hidden;
+              color: #000;
+              line-height: 1.3;
+              justify-content: center;
+              width: 730px;
+              margin: auto 0;
+              padding: 1px 0;
+            }
+            
+            @media (max-width: 991px) {
+              .stats-container {
+                max-width: 100%;
+              }
+            }
+            
+            .stats-wrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+            }
+            
+            @media (max-width: 991px) {
+              .stats-wrapper {
+                max-width: 100%;
+              }
+            }
+            
+            .stats-content {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+            
+            @media (max-width: 991px) {
+              .stats-content {
+                max-width: 100%;
+              }
+            }
+            
+            .clinics-count {
+              font-size: 40px;
+              font-weight: 700;
+            }
+            
+            @media (max-width: 991px) {
+              .clinics-count {
+                max-width: 100%;
+              }
+            }
+            
+            .specialists-count {
+              font-size: 28px;
+              font-weight: 400;
+              margin-top: 24px;
+            }
+            
+            @media (max-width: 991px) {
+              .specialists-count {
+                max-width: 100%;
+              }
+            }
+            
+            .ratings-container {
+              align-self: stretch;
+              display: flex;
+              min-width: 240px;
+              align-items: center;
+              gap: 32px;
+              justify-content: flex-start;
+              flex-wrap: wrap;
+              margin: auto 0;
+            }
+            
+            @media (max-width: 991px) {
+              .ratings-container {
+                max-width: 100%;
+              }
+            }
+            
+            .ratings-wrapper {
+              align-self: stretch;
+              display: flex;
+              min-width: 240px;
+              align-items: flex-start;
+              gap: 32px;
+              font-weight: 700;
+              justify-content: flex-start;
+              margin: auto 0;
+            }
+            
+            .ratings-image {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 99px;
+            }
+            
+            .ratings-content {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              width: 216px;
+            }
+            
+            .ratings-score {
+              display: flex;
+              width: 101px;
+              max-width: 100%;
+              flex-direction: column;
+              overflow: hidden;
+              font-size: 24px;
+              color: #4d2c19;
+              white-space: nowrap;
+            }
+            
+            @media (max-width: 991px) {
+              .ratings-score {
+                white-space: initial;
+              }
+            }
+            
+            .score-wrapper {
+              display: flex;
+              height: 33px;
+              align-items: center;
+              gap: 6px;
+              justify-content: flex-start;
+            }
+            
+            @media (max-width: 991px) {
+              .score-wrapper {
+                white-space: initial;
+              }
+            }
+            
+            .star-icon {
+              aspect-ratio: 1.12;
+              object-fit: contain;
+              object-position: center;
+              width: 37px;
+              align-self: stretch;
+              margin: auto 0;
+            }
+            
+            .score-text {
+              align-self: stretch;
+              margin: auto 0;
+            }
+            
+            .ratings-count {
+              display: flex;
+              margin-top: 16px;
+              max-width: 100%;
+              width: 216px;
+              flex-direction: column;
+              overflow: hidden;
+              font-size: 14px;
+              color: #303030;
+              line-height: 21px;
+            }
+            
+            .ratings-highlight {
+              font-size: 32px;
+              line-height: 48px;
+              color: #ea7d28;
+            }
+            
+            .ratings-label {
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 27px;
+            }
+            
+            .divider {
+              align-self: stretch;
+              width: 0;
+              height: 150px;
+              margin: auto 0;
+              border: 2px solid #fadabe;
+            }
+            
+            .location-container {
+              align-self: stretch;
+              display: flex;
+              min-width: 240px;
+              flex-direction: column;
+              font-family: Raleway, sans-serif;
+              font-weight: 500;
+              justify-content: flex-start;
+              width: 400px;
+              margin: auto 0;
+            }
+            
+            .city-selector {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              font-size: 21px;
+              color: #a0a0a0;
+            }
+            
+            .selector-wrapper {
+              border-radius: 63px;
+              background-color: #fff;
+              display: flex;
+              gap: 20px;
+              justify-content: space-between;
+              padding: 26px 31px;
+              border: 1px solid #b0b0b0;
+            }
+            
+            @media (max-width: 991px) {
+              .selector-wrapper {
+                padding: 0 20px;
+              }
+            }
+            
+            .dropdown-icon {
+              aspect-ratio: 1.91;
+              object-fit: contain;
+              object-position: center;
+              width: 21px;
+              margin: auto 0;
+            }
+            
+            .locate-button {
+              align-self: stretch;
+              border-radius: 50px;
+              background-color: #f8943f;
+              margin-top: 24px;
+              min-height: 72px;
+              max-width: 100%;
+              width: 400px;
+              gap: 13px;
+              font-size: 24px;
+              color: #fff;
+              padding: 28px 48px;
+              border: 1px solid #de6f0d;
+              cursor: pointer;
+            }
+            
+            @media (max-width: 991px) {
+              .locate-button {
+                padding: 0 20px;
+              }
+            }
+            
+            .highlight {
+              color: #ea7d28;
+            }
+            
+            .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              white-space: nowrap;
+              border: 0;
+            }
+            </style>
+            
+            <section class="clinic-stats">
+              <div class="stats-container">
+                <div class="stats-wrapper">
+                  <div class="stats-content">
+                    <h2 class="clinics-count"><span class="highlight">450+</span> World Class Clinics</h2>
+                    <p class="specialists-count">Manned by 1200+ Super Specialists</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ratings-container">
+                <div class="ratings-wrapper">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/514d1b84712060198c952b16fe584dd2a5284a6b18fa4b26cf77c8143e90a9a2?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="ratings-image" alt="Ratings illustration" />
+                  <div class="ratings-content">
+                    <div class="ratings-score">
+                      <div class="score-wrapper">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ef6586ac6be90308d22a356455de1422b972149d149f5c7103120a7713ea489?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="star-icon" alt="Star icon" />
+                        <span class="score-text">4.9/5</span>
+                      </div>
+                    </div>
+                    <div class="ratings-count">
+                      <span class="ratings-highlight">1.5 Lakh+</span>
+                      <br />
+                      <span class="ratings-label">5 Star Ratings</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider" aria-hidden="true"></div>
+                <div class="location-container">
+                  <div class="city-selector">
+                    <div class="selector-wrapper" tabindex="0" role="button">
+                      <span>Select your City</span>
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f6a906053844bbf51956537e525887db6ed9391cdb9b302b01b3cd9a09c689a?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="dropdown-icon" alt="Dropdown icon" />
+                    </div>
+                  </div>
+                  <button class="locate-button">Locate nearest Clove clinic</button>
+                </div>
+              </div>
+            </section>
+            <style>
+                .dental-services {
+                  border-radius: 30px;
+                  background-color: #fff9f4;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  color: #303030;
+                  padding: 80px;
+                  font: 700 24px Raleway, sans-serif;
+                }
+                
+                @media (max-width: 991px) {
+                  .dental-services {
+                    padding: 0 20px;
+                  }
+                }
+                
+                .services-title {
+                  max-width: 100%;
+                  font-size: 40px;
+                  text-align: center;
+                  line-height: 52px;
+                }
+                
+                .services-grid {
+                  display: flex;
+                  margin-top: 60px;
+                  flex-direction: column;
+                  font-weight: 600;
+                }
+                
+                @media (max-width: 991px) {
+                  .services-grid {
+                    max-width: 100%;
+                    margin-top: 40px;
+                  }
+                }
+                
+                .services-row {
+                  display: flex;
+                  align-items: start;
+                  gap: 24px;
+                  line-height: 31px;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                }
+                
+                @media (max-width: 991px) {
+                  .services-row {
+                    max-width: 100%;
+                  }
+                }
+                
+                .service-card {
+                  border-radius: 15px;
+                  background-color: #fff;
+                  display: flex;
+                  min-height: 204px;
+                  flex-direction: column;
+                  justify-content: center;
+                  width: 235px;
+                  padding: 24px 18px;
+                }
+                
+                .service-icon {
+                  aspect-ratio: 1;
+                  object-fit: contain;
+                  object-position: center;
+                  align-self: center;
+                }
+                
+                .service-name {
+                  display: flex;
+                  margin-top: 36px;
+                  height: 45px;
+                  width: 100%;
+                  align-items: center;
+                  justify-content: space-between;
+                }
+                
+                .explore-section {
+                  align-self: stretch;
+                  display: flex;
+                  margin-top: 60px;
+                  height: 14px;
+                  width: 100%;
+                  align-items: center;
+                  gap: 16px;
+                  color: #4d2c19;
+                  line-height: 1.3;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                }
+                
+                @media (max-width: 991px) {
+                  .explore-section {
+                    max-width: 100%;
+                    margin-top: 40px;
+                  }
+                }
+                
+                .explore-icon {
+                  aspect-ratio: 0.96;
+                  object-fit: contain;
+                  object-position: center;
+                  width: 23px;
+                  align-self: stretch;
+                  margin: auto 0;
+                }
+                
+                .explore-link {
+                  text-decoration-line: underline;
+                  align-self: stretch;
+                  margin: auto 0;
+                }
+                
+                .arrow-icon {
+                  aspect-ratio: 1.43;
+                  object-fit: contain;
+                  object-position: center;
+                  width: 20px;
+                  stroke-width: 2px;
+                  stroke: #ea7d28;
+                  align-self: stretch;
+                  margin: auto 0;
+                }
+                
+                .visually-hidden {
+                  position: absolute;
+                  width: 1px;
+                  height: 1px;
+                  padding: 0;
+                  margin: -1px;
+                  overflow: hidden;
+                  clip: rect(0, 0, 0, 0);
+                  white-space: nowrap;
+                  border: 0;
+                }
+                </style>
+                
+                <section class="dental-services">
+                  <h2 class="services-title">All dental issues from simple cleaning<br>to full mouth rehabilitation under one roof</h2>
+                  <div class="services-grid">
+                    <div class="services-row">
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e580cd1a6bdcbe5ba83621f9649a892c2d381ba871012570ce88acc038813be?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Root Canal Treatment Icon" class="service-icon" style="width: 51px;">
+                        <h3 class="service-name">Root Canal<br>Treatment</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/555c592536bd3d5133aecd9f03cf2251681406da8da047f6f5376ddddee489bd?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Braces Icon" class="service-icon" style="width: 109px;">
+                        <h3 class="service-name">Braces</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e29dc33bce2cde0d7e7912c2748d70ffb3c8392cbf0658e8486e49df673f93eb?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Teeth Whitening Icon" class="service-icon" style="width: 80px;">
+                        <h3 class="service-name">Teeth<br>Whitening</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe6610130a347de4043c6934b4f358b22afbd66c4d1959079ca101752d96461a?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Invisible Braces Icon" class="service-icon" style="width: 120px;">
+                        <h3 class="service-name">Invisible<br>Braces</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d69102b0b5dc40bc626336cd0df6496e67ca12257028cad4a4e34bea27bee225?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Dental Implants Icon" class="service-icon" style="width: 55px;">
+                        <h3 class="service-name">Dental<br>Implants</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aed277f6138b740190e79bbf89af9545827bd5dc3c0bd4022b2f03e27a5e2210?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Smile Makeover Icon" class="service-icon" style="width: 77px;">
+                        <h3 class="service-name">Smile<br>Makeover</h3>
+                      </article>
+                    </div>
+                    <div class="services-row">
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4209e41361ed78b454b324a0e1eba95b0fd3d0da1601ffc5cc33e9bfccd87d3?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Kids Dentistry Icon" class="service-icon" style="width: 75px;">
+                        <h3 class="service-name">Kids Dentistry</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/eccabddc3b5a6fb510d64ea28eb559098cc34a44d8421dea1d5cc5c8a2b42f51?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Gum Treatment Icon" class="service-icon" style="width: 128px;">
+                        <h3 class="service-name">Gum Treatment</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/499cf66a4c4cb1b70b4e3ac97a8b6339f15013fdfc8735d02c4255cb5890af92?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Wisdom Tooth Icon" class="service-icon" style="width: 100px;">
+                        <h3 class="service-name">Wisdom tooth</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/54b71539c19048f0fe4b274e89a9e70843dca12337ec20fa271bc9d889d6eb11?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Laser/Painless Dentistry Icon" class="service-icon" style="width: 61px;">
+                        <h3 class="service-name">Laser/Painless Dentistry</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f6016d310a5833dbaf79a0e343fb5e144ad638be08a6edd2ab00e5819421e0a7?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Crowns & Bridges Icon" class="service-icon" style="width: 54px;">
+                        <h3 class="service-name">Crowns & Bridges</h3>
+                      </article>
+                      <article class="service-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/72af4a10d8c2f1d1dba32bde9b9ba38ac0d98bc9193ad8a7d8aefa733da47372?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Dentures Icon" class="service-icon" style="width: 79px;">
+                        <h3 class="service-name">Dentures</h3>
+                      </article>
+                    </div>
+                  </div>
+                  <div class="explore-section">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c8668c2a289c12d3759f3a2da9b2662b3320f2bcd9cee8dc7458449c02dacbc?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="explore-icon">
+                    <a href="#" class="explore-link">Explore Treatments</a>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/239f4ff8ad4107d8c2d612f8d20d5312777575a5ea83b0e1913745cc3d75e631?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="arrow-icon">
+                  </div>
+                </section>
+                <style>
+                    .expert-guidance {
+                      display: flex;
+                      align-items: center;
+                      gap: 36px;
+                      justify-content: center;
+                      flex-wrap: wrap;
+                      padding: 60px;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .expert-guidance {
+                        padding: 20px;
+                      }
+                    }
+                    
+                    .consultation-card {
+                      border-radius: 24px;
+                      background-color: #fff9f4;
+                      align-self: stretch;
+                      display: flex;
+                      min-width: 240px;
+                      min-height: 786px;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      flex: 1;
+                      flex-basis: 0%;
+                      margin: auto 0;
+                      padding: 0 80px 24px;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .consultation-card {
+                        max-width: 100%;
+                        padding: 0 20px;
+                      }
+                    }
+                    
+                    .card-header {
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: start;
+                    }
+                    
+                    .card-title {
+                      color: #303030;
+                      font: 700 40px/52px Raleway, sans-serif;
+                    }
+                    
+                    .card-subtitle {
+                      color: #474747;
+                      margin-top: 20px;
+                      font: 400 24px/1.3 Open Sans, sans-serif;
+                    }
+                    
+                    .consultation-form {
+                      display: flex;
+                      margin-top: 92px;
+                      width: 401px;
+                      max-width: 100%;
+                      align-items: start;
+                      gap: 48px 35px;
+                      justify-content: start;
+                      flex-wrap: wrap;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .consultation-form {
+                        margin-top: 40px;
+                      }
+                    }
+                    
+                    .form-group {
+                      display: flex;
+                      min-width: 240px;
+                      flex-direction: column;
+                      justify-content: start;
+                      flex-grow: 1;
+                      width: 321px;
+                    }
+                    
+                    .input-wrapper {
+                      display: flex;
+                      width: 100%;
+                      flex-direction: column;
+                    }
+                    
+                    .input-label {
+                      z-index: 10;
+                      background-color: #fff8f2;
+                      align-self: start;
+                      color: #888;
+                      white-space: nowrap;
+                      margin: -8px 0 0 34px;
+                      padding: 0 5px;
+                      font: 400 20px Switzer, sans-serif;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .input-label {
+                        margin-left: 10px;
+                        white-space: initial;
+                      }
+                    }
+                    
+                    .form-input {
+                      border-radius: 80px;
+                      background-color: #fff;
+                      color: #5e5e5e;
+                      padding: 26px 32px;
+                      font: 600 28px Open Sans, sans-serif;
+                      border: 2px solid #b0b0b0;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .form-input {
+                        padding: 0 20px;
+                      }
+                    }
+                    
+                    .select-wrapper {
+                      display: flex;
+                      margin-top: 32px;
+                      width: 100%;
+                      max-width: 400px;
+                      flex-direction: column;
+                      color: #a0a0a0;
+                      font: 400 24px Open Sans, sans-serif;
+                    }
+                    
+                    .select-container {
+                      border-radius: 80px;
+                      background-color: #fff;
+                      display: flex;
+                      gap: 20px;
+                      justify-content: space-between;
+                      padding: 28px 29px;
+                      border: 2px solid #b0b0b0;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .select-container {
+                        padding: 0 20px;
+                      }
+                    }
+                    
+                    .select-icon {
+                      aspect-ratio: 1.79;
+                      object-fit: contain;
+                      object-position: center;
+                      width: 25px;
+                      fill: #ea7d28;
+                      align-self: start;
+                    }
+                    
+                    .submit-button {
+                      align-self: stretch;
+                      border-radius: 50px;
+                      background-color: #f8943f;
+                      min-width: 240px;
+                      min-height: 72px;
+                      gap: 13px;
+                      color: #fff;
+                      flex-grow: 1;
+                      width: 320px;
+                      padding: 28px 55px;
+                      font: 500 24px Raleway, sans-serif;
+                      border: 1px solid #de6f0d;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .submit-button {
+                        padding: 0 20px;
+                      }
+                    }
+                    
+                    .safety-section {
+                      align-self: stretch;
+                      display: flex;
+                      min-width: 240px;
+                      flex-direction: column;
+                      justify-content: start;
+                      width: 934px;
+                      margin: auto 0;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .safety-section {
+                        max-width: 100%;
+                      }
+                    }
+                    
+                    .safety-content {
+                      border-radius: 24px;
+                      background-color: #fbf5ff;
+                      max-width: 100%;
+                      width: 934px;
+                      padding-left: 40px;
+                      overflow: hidden;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .safety-content {
+                        padding-left: 20px;
+                      }
+                    }
+                    
+                    .safety-row {
+                      gap: 20px;
+                      display: flex;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .safety-row {
+                        flex-direction: column;
+                        align-items: stretch;
+                        gap: 0px;
+                      }
+                    }
+                    
+                    .safety-info {
+                      display: flex;
+                      flex-direction: column;
+                      line-height: normal;
+                      width: 59%;
+                      margin-left: 0px;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .safety-info {
+                        width: 100%;
+                      }
+                    }
+                    
+                    .safety-header {
+                      z-index: 10;
+                      display: flex;
+                      width: 100%;
+                      padding-bottom: 18px;
+                      flex-direction: column;
+                      align-items: start;
+                      color: #303030;
+                      line-height: 1;
+                      margin: 60px -71px 0 0;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .safety-header {
+                        max-width: 100%;
+                        margin-top: 40px;
+                      }
+                    }
+                    
+                    .safety-title {
+                      font: 700 56px Raleway, sans-serif;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .safety-title {
+                        max-width: 100%;
+                        font-size: 40px;
+                      }
+                    }
+                    
+                    .safety-details {
+                      align-self: stretch;
+                      display: flex;
+                      margin-top: 24px;
+                      flex-direction: column;
+                      align-items: start;
+                      justify-content: start;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .safety-details {
+                        max-width: 100%;
+                      }
+                    }
+                    
+                    .safety-feature {
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: start;
+                    }
+                    
+                    .feature-title {
+                      font: 300 28px Switzer, sans-serif;
+                    }
+                    
+                    .feature-subtitle {
+                      margin-top: 16px;
+                      font: 400 18px Open Sans, sans-serif;
+                    }
+                    
+                    .feature-description {
+                      align-self: stretch;
+                      margin-top: 40px;
+                      font: 300 28px Open Sans, sans-serif;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .feature-description {
+                        max-width: 100%;
+                      }
+                    }
+                    
+                    .learn-more-link {
+                      z-index: 10;
+                      display: flex;
+                      margin-top: -44px;
+                      align-items: center;
+                      gap: 16px;
+                      color: #4d2c19;
+                      justify-content: start;
+                      font: 700 20px/1.3 Raleway, sans-serif;
+                    }
+                    
+                    .learn-more-text {
+                      text-decoration-line: underline;
+                      align-self: stretch;
+                      margin: auto 0;
+                    }
+                    
+                    .learn-more-icon {
+                      aspect-ratio: 1.43;
+                      object-fit: contain;
+                      object-position: center;
+                      width: 20px;
+                      stroke-width: 2px;
+                      stroke: #4d2c19;
+                      align-self: stretch;
+                      margin: auto 0;
+                    }
+                    
+                    .safety-image {
+                      display: flex;
+                      flex-direction: column;
+                      line-height: normal;
+                      width: 41%;
+                      margin-left: 20px;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .safety-image {
+                        width: 100%;
+                      }
+                    }
+                    
+                    .safety-img {
+                      aspect-ratio: 0.93;
+                      object-fit: contain;
+                      object-position: center;
+                      width: 100%;
+                      flex-grow: 1;
+                    }
+                    
+                    .info-cards {
+                      display: flex;
+                      margin-top: 24px;
+                      align-items: center;
+                      gap: 34px;
+                      font-family: Raleway, sans-serif;
+                      font-weight: 700;
+                      justify-content: center;
+                      flex-wrap: wrap;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .info-cards {
+                        max-width: 100%;
+                      }
+                    }
+                    
+                    .info-card {
+                      align-self: stretch;
+                      display: flex;
+                      min-width: 240px;
+                      flex-direction: column;
+                      width: 450px;
+                      margin: auto 0;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .info-card {
+                        max-width: 100%;
+                      }
+                    }
+                    
+                    .card-content {
+                      border-radius: 20px;
+                      display: flex;
+                      width: 100%;
+                      flex-direction: column;
+                      align-items: center;
+                      padding: 22px 45px;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .card-content {
+                        max-width: 100%;
+                        padding: 0 20px;
+                      }
+                    }
+                    
+                    .card-heading {
+                      color: #303030;
+                      text-align: center;
+                      font-size: 24px;
+                      line-height: 31px;
+                      align-self: start;
+                      width: 249px;
+                    }
+                    
+                    .card-icon {
+                      aspect-ratio: 0.97;
+                      object-fit: contain;
+                      object-position: center;
+                      width: 116px;
+                      margin-top: 31px;
+                      max-width: 100%;
+                    }
+                    
+                    .card-link {
+                      display: flex;
+                      margin-top: 64px;
+                      align-items: center;
+                      gap: 16px;
+                      font-size: 18px;
+                      color: #4d2c19;
+                      line-height: 1.3;
+                      justify-content: start;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .card-link {
+                        margin-top: 40px;
+                      }
+                    }
+                    
+                    .link-text {
+                      text-decoration-line: underline;
+                      align-self: stretch;
+                      margin: auto 0;
+                    }
+                    
+                    .link-icon {
+                      aspect-ratio: 1.33;
+                      object-fit: contain;
+                      object-position: center;
+                      width: 20px;
+                      stroke-width: 2px;
+                      stroke: #ea7d28;
+                      align-self: stretch;
+                      margin: auto 0;
+                    }
+                    
+                    .blue-card {
+                      background-color: #f5f8ff;
+                    }
+                    
+                    .green-card {
+                      background-color: #e1f2ee;
+                    }
+                    
+                    .visually-hidden {
+                      position: absolute;
+                      width: 1px;
+                      height: 1px;
+                      padding: 0;
+                      margin: -1px;
+                      overflow: hidden;
+                      clip: rect(0, 0, 0, 0);
+                      white-space: nowrap;
+                      border: 0;
+                    }
+                    </style>
+                    
+                    <section class="expert-guidance">
+                      <div class="consultation-card">
+                        <header class="card-header">
+                          <h2 class="card-title">Expert Guidance for <br /> Healthy Smiles</h2>
+                          <p class="card-subtitle">Contact Now</p>
+                        </header>
+                        <form class="consultation-form">
+                          <div class="form-group">
+                            <div class="input-wrapper">
+                              <label for="name" class="input-label">Name</label>
+                              <input id="name" type="text" class="form-input" value="Amit Rana" />
+                            </div>
+                            <div class="input-wrapper">
+                              <label for="mobile" class="input-label visually-hidden">Mobile Number</label>
+                              <input id="mobile" type="tel" class="form-input" placeholder="Mobile Number" />
+                            </div>
+                            <div class="select-wrapper">
+                              <div class="select-container">
+                                <label for="concern" class="visually-hidden">Select Concern</label>
+                                <select id="concern" class="form-input">
+                                  <option value="">Select Concern</option>
+                                </select>
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff37a7ffed2f3963ab9761885d3e137691cf86142398e702f67ad7d4ad89b14a?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="select-icon" />
+                              </div>
+                            </div>
+                          </div>
+                          <button type="submit" class="submit-button">Book A Free Consultation</button>
+                        </form>
+                      </div>
+                      <div class="safety-section">
+                        <div class="safety-content">
+                          <div class="safety-row">
+                            <div class="safety-info">
+                              <header class="safety-header">
+                                <h2 class="safety-title">10x Safety Protocols</h2>
+                              </header>
+                              <div class="safety-details">
+                                <div class="safety-feature">
+                                  <h3 class="feature-title">Monitored by DORI</h3>
+                                  <p class="feature-subtitle">(Artificial Intelligence System)</p>
+                                </div>
+                                <p class="feature-description">with UV light sterilized equipment at all clinics</p>
+                                <p class="feature-description">Reverse osmosis (RO) Filtration System to ensure safest water supply.</p>
+                                <div class="safety-feature">
+                                  <h3 class="feature-title">Monitored by DORI</h3>
+                                  <p class="feature-subtitle">(Artificial Intelligence System)</p>
+                                </div>
+                              </div>
+                              <div class="learn-more-link">
+                                <span class="learn-more-text">Learn More</span>
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f8a5dcbc81dca033007eeae540d55a872c45d8620ab4f7c3580c1bb92b9f507?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="learn-more-icon" />
+                              </div>
+                            </div>
+                            <div class="safety-image">
+                              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/93007ab12cf00b53c55ea2c69e21f9a45caa962f3bae5403917690e9f9b46b8f?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Safety protocols illustration" class="safety-img" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="info-cards">
+                          <div class="info-card">
+                            <div class="card-content blue-card">
+                              <h3 class="card-heading">450+ Neighbourhood <br /> <span style="font-weight: 400; font-size: 20px">Clinics Pan India</span></h3>
+                              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/65b2699d382d9bcd46ff24f7037d9be3dc53e3ef410b7def2d3d5547dbb18132?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Clinic locations icon" class="card-icon" />
+                              <div class="card-link">
+                                <span class="link-text">Locate Clinic near you</span>
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeafd450694cbb2cd36cb5e59a7096ce12b4f983366a9e127a3226cf7be96fc4?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="link-icon" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="info-card">
+                            <div class="card-content green-card">
+                              <h3 class="card-heading">1200+ Expert Doctors <br /> <span style="font-weight: 400; font-size: 20px">Covering All Specialities</span></h3>
+                              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/63067aae264cd02d50cb23f08c61735e7d8f7be809263c3ed0a3dbc3bba06df9?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Doctors icon" class="card-icon" />
+                              <div class="card-link">
+                                <span class="link-text">Explore Dentists Nearby</span>
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeafd450694cbb2cd36cb5e59a7096ce12b4f983366a9e127a3226cf7be96fc4?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="link-icon" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- #######################one component is missing################################# -->
+                    <style>
+                        .dental-excellence {
+                            background-color: #fff9f4;
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 40px 131px;
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            padding: 80px 108px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .dental-excellence {
+                                padding: 0 20px;
+                            }
+                        }
+                        
+                        .excellence-content {
+                            display: flex;
+                            min-width: 240px;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            width: 640px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .excellence-content {
+                                max-width: 100%;
+                            }
+                        }
+                        
+                        .excellence-title {
+                            color: #303030;
+                            font: 700 40px/52px Raleway, sans-serif;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .excellence-title {
+                                max-width: 100%;
+                            }
+                        }
+                        
+                        .specialists-info {
+                            display: flex;
+                            margin-top: 60px;
+                            width: 550px;
+                            max-width: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .specialists-info {
+                                margin-top: 40px;
+                            }
+                        }
+                        
+                        .specialists-card {
+                            border-radius: 20px;
+                            background-color: #fff9f4;
+                            display: flex;
+                            width: 100%;
+                            align-items: center;
+                            gap: 40px 60px;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            padding: 12px 0;
+                        }
+                        
+                        .specialists-icon {
+                            aspect-ratio: 1.36;
+                            object-fit: contain;
+                            object-position: center;
+                            width: 101px;
+                            align-self: stretch;
+                            margin: auto 0;
+                        }
+                        
+                        .specialists-details {
+                            align-self: stretch;
+                            display: flex;
+                            min-width: 240px;
+                            min-height: 87px;
+                            flex-direction: column;
+                            justify-content: center;
+                            width: 270px;
+                            margin: auto 0;
+                        }
+                        
+                        .specialists-title {
+                            color: #4d2c19;
+                            font: 600 24px/1.3 Open Sans, sans-serif;
+                        }
+                        
+                        .specialists-count {
+                            display: flex;
+                            margin-top: 22px;
+                            max-width: 100%;
+                            width: 270px;
+                            flex-direction: column;
+                            overflow: hidden;
+                            color: #303030;
+                            font: 400 20px/2 Switzer, sans-serif;
+                        }
+                        
+                        .orthodontists-count {
+                            min-height: 285px;
+                        }
+                        
+                        .women-leadership {
+                            border-radius: 20px;
+                            background-color: #fff9f4;
+                            display: flex;
+                            margin-top: 40px;
+                            min-height: 111px;
+                            width: 100%;
+                            align-items: center;
+                            gap: 40px 71px;
+                            color: #f6841f;
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            padding: 14px 71px;
+                            font: 600 24px/31px Open Sans, sans-serif;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .women-leadership {
+                                padding: 0 20px;
+                            }
+                        }
+                        
+                        .women-icon {
+                            aspect-ratio: 0.93;
+                            object-fit: contain;
+                            object-position: center;
+                            width: 78px;
+                            align-self: stretch;
+                            margin: auto 0;
+                        }
+                        
+                        .women-percentage {
+                            align-self: stretch;
+                            min-width: 240px;
+                            flex-grow: 1;
+                            width: 225px;
+                            margin: auto 0;
+                        }
+                        
+                        .mds-doctors {
+                            margin-top: 40px;
+                            width: 100%;
+                            padding: 16px 55px 27px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .mds-doctors {
+                                padding: 0 20px;
+                            }
+                        }
+                        
+                        .mds-content {
+                            gap: 20px;
+                            display: flex;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .mds-content {
+                                flex-direction: column;
+                                align-items: stretch;
+                                gap: 0;
+                            }
+                        }
+                        
+                        .mds-icon-column {
+                            display: flex;
+                            flex-direction: column;
+                            line-height: normal;
+                            width: 17%;
+                            margin-left: 0;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .mds-icon-column {
+                                width: 100%;
+                            }
+                        }
+                        
+                        .mds-icon {
+                            aspect-ratio: 0.75;
+                            object-fit: contain;
+                            object-position: center;
+                            width: 51px;
+                            flex-grow: 1;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .mds-icon {
+                                margin-top: 40px;
+                            }
+                        }
+                        
+                        .mds-text-column {
+                            display: flex;
+                            flex-direction: column;
+                            line-height: normal;
+                            width: 83%;
+                            margin-left: 20px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .mds-text-column {
+                                width: 100%;
+                            }
+                        }
+                        
+                        .mds-description {
+                            color: #4d2c19;
+                            align-self: stretch;
+                            margin: auto 0;
+                            font: 400 20px/26px Open Sans, sans-serif;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .mds-description {
+                                margin-top: 40px;
+                            }
+                        }
+                        
+                        .doctors-section {
+                            display: flex;
+                            min-width: 240px;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            width: 933px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .doctors-section {
+                                max-width: 100%;
+                            }
+                        }
+                        
+                        .doctors-carousel {
+                            overflow-x: auto;
+                            display: flex;
+                            max-width: 100%;
+                            width: 1041px;
+                            gap: 32px;
+                            overflow: hidden;
+                            font-family: Open Sans, sans-serif;
+                            line-height: 1.3;
+                        }
+                        
+                        .doctor-card {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            flex: 1;
+                        }
+                        
+                        .doctor-image {
+                            aspect-ratio: 1;
+                            object-fit: contain;
+                            object-position: center;
+                            width: 360px;
+                            border-radius: 20px;
+                            max-width: 100%;
+                        }
+                        
+                        .doctor-info {
+                            display: flex;
+                            margin-top: 24px;
+                            width: 307px;
+                            max-width: 100%;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                        }
+                        
+                        .doctor-name {
+                            color: #303030;
+                            font-size: 24px;
+                            font-weight: 700;
+                        }
+                        
+                        .doctor-experience {
+                            color: #474747;
+                            font-size: 20px;
+                            font-weight: 400;
+                            margin-top: 16px;
+                        }
+                        
+                        .meet-doctors-btn {
+                            align-self: stretch;
+                            border-radius: 50px;
+                            background-color: #f8943f;
+                            margin-top: 60px;
+                            min-height: 72px;
+                            width: 400px;
+                            max-width: 100%;
+                            color: #fff;
+                            padding: 28px 55px;
+                            font: 500 24px Raleway, sans-serif;
+                            border: 1px solid #de6f0d;
+                        }
+                        
+                        @media (max-width: 991px) {
+                            .meet-doctors-btn {
+                                margin-top: 40px;
+                                padding: 0 20px;
+                            }
+                        }
+                        
+                        .visually-hidden {
+                            position: absolute;
+                            width: 1px;
+                            height: 1px;
+                            padding: 0;
+                            margin: -1px;
+                            overflow: hidden;
+                            clip: rect(0, 0, 0, 0);
+                            white-space: nowrap;
+                            border: 0;
+                        }
+                        </style>
+                        
+                        <section class="dental-excellence">
+                            <div class="excellence-content">
+                                <h2 class="excellence-title">Unmatched Dental Excellence <br /> by 1200+ Specialists</h2>
+                                <div class="specialists-info">
+                                    <div class="specialists-card">
+                                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e59b8e7ab40b4debf60db11dd065e7bdde66f47911530ae48717516c9f2655c?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="specialists-icon" alt="Team of Specialists icon" />
+                                        <div class="specialists-details">
+                                            <h3 class="specialists-title">Team of Specialists</h3>
+                                            <div class="specialists-count">
+                                                <p class="orthodontists-count">
+                                                    <span class="highlight-text">75+</span> Orthodontists
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="women-leadership">
+                                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/51c676affaa665b92b29604e4362be2fc2ebe582193c3b8a674adf5721e44f51?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="women-icon" alt="Women leadership icon" />
+                                        <p class="women-percentage">
+                                            Leading with <br />
+                                            <span class="highlight-text">80%</span> women
+                                        </p>
+                                    </div>
+                                    <div class="mds-doctors">
+                                        <div class="mds-content">
+                                            <div class="mds-icon-column">
+                                                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/47630905af476988757bcf6da9e45bc7ef5e1c34ceec55394a8d97ecf38f36aa?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="mds-icon" alt="MDS Doctors icon" />
+                                            </div>
+                                            <div class="mds-text-column">
+                                                <p class="mds-description">
+                                                    <span class="highlight-text">65%</span> MDS <br /> Doctors for specialised care
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doctors-section">
+                                <div class="doctors-carousel">
+                                    <article class="doctor-card">
+                                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd2195e5d101bca6b7b1205c3ea6e8236fa2250fb208093f43527319c874cf6a?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="doctor-image" alt="Dr. Suresh Kumar" />
+                                        <div class="doctor-info">
+                                            <h3 class="doctor-name">Dr. Suresh Kumar</h3>
+                                            <p class="doctor-experience">18+ Years Experience</p>
+                                        </div>
+                                    </article>
+                                    <article class="doctor-card">
+                                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d1c6ad951e3ee6faeb8e68f0511d000534dbb93e4c32c4710b83fe11049b385d?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="doctor-image" alt="Dr. Rajni Mary" />
+                                        <div class="doctor-info">
+                                            <h3 class="doctor-name">Dr. Rajni Mary</h3>
+                                            <p class="doctor-experience">10+ Years Experience</p>
+                                        </div>
+                                    </article>
+                                    <article class="doctor-card">
+                                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5e0146d8c435f72dc6b135a0465c38ba46df3dd398eb706196f223fff01c447?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="doctor-image" alt="Dr. Shushma Reddy" />
+                                        <div class="doctor-info">
+                                            <h3 class="doctor-name">Dr. Shushma Reddy</h3>
+                                            <p class="doctor-experience">20+ Years Experience</p>
+                                        </div>
+                                    </article>
+                                    <article class="doctor-card">
+                                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/452c24a4d56f025ea47fa64ab68bffd8436f42a2d7e12d278d73cd36c2bc953c?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="doctor-image" alt="Dr. Shahu" />
+                                        <div class="doctor-info">
+                                            <h3 class="doctor-name">Dr. Shahu</h3>
+                                            <p class="doctor-experience">10+ Years Experience</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <button class="meet-doctors-btn">Meet our Doctors</button>
+                            </div>
+                        </section>
+                        <style>
+                            .cleanliness-section {
+                              display: flex;
+                              flex-direction: column;
+                              position: relative;
+                              min-height: 429px;
+                              margin-bottom: -42px;
+                              width: 100%;
+                              align-items: start;
+                              padding: 147px 80px 0;
+                            }
+                            
+                            @media (max-width: 991px) {
+                              .cleanliness-section {
+                                max-width: 100%;
+                                margin-bottom: 10px;
+                                padding: 100px 20px 0;
+                              }
+                            }
+                            
+                            .background-image {
+                              position: absolute;
+                              inset: 0;
+                              height: 100%;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            }
+                            
+                            .content-container {
+                              position: relative;
+                              border-radius: 24px;
+                              background-color: rgba(17, 34, 48, 1);
+                              z-index: 10;
+                              display: flex;
+                              margin-bottom: -64px;
+                              width: 543px;
+                              max-width: 100%;
+                              flex-direction: column;
+                              padding: 55px 40px;
+                            }
+                            
+                            @media (max-width: 991px) {
+                              .content-container {
+                                margin-bottom: 10px;
+                                padding: 0 20px;
+                              }
+                            }
+                            
+                            .header-container {
+                              display: flex;
+                              gap: 40px 67px;
+                              font-size: 50px;
+                              line-height: 60px;
+                            }
+                            
+                            @media (max-width: 991px) {
+                              .header-container {
+                                max-width: 100%;
+                                font-size: 40px;
+                                line-height: 53px;
+                              }
+                            }
+                            
+                            .section-title {
+                              flex-grow: 1;
+                              width: 251px;
+                              flex-basis: auto;
+                            }
+                            
+                            @media (max-width: 991px) {
+                              .section-title {
+                                font-size: 40px;
+                                line-height: 53px;
+                              }
+                            }
+                            
+                            .icon {
+                              aspect-ratio: 12.05;
+                              object-fit: contain;
+                              object-position: center;
+                              width: 120px;
+                              stroke-width: 10px;
+                              stroke: var(--Orange, #ea7d28);
+                              max-width: 100%;
+                              margin: auto 0;
+                            }
+                            
+                            .description {
+                              margin-top: 22px;
+                              font: 300 24px/31px Open Sans, sans-serif;
+                            }
+                            
+                            @media (max-width: 991px) {
+                              .description {
+                                max-width: 100%;
+                                margin-right: 5px;
+                              }
+                            }
+                            
+                            .cta-container {
+                              align-self: start;
+                              display: flex;
+                              margin-top: 46px;
+                              align-items: center;
+                              gap: 16px;
+                              font-size: 20px;
+                              color: var(--Orange, #ea7d28);
+                              line-height: 1.3;
+                              justify-content: start;
+                            }
+                            
+                            @media (max-width: 991px) {
+                              .cta-container {
+                                margin-top: 40px;
+                              }
+                            }
+                            
+                            .cta-text {
+                              align-self: stretch;
+                              margin: auto 0;
+                            }
+                            
+                            .cta-icon {
+                              aspect-ratio: 1;
+                              object-fit: contain;
+                              object-position: center;
+                              width: 23px;
+                              align-self: stretch;
+                              margin: auto 0;
+                            }
+                            
+                            .visually-hidden {
+                              position: absolute;
+                              width: 1px;
+                              height: 1px;
+                              padding: 0;
+                              margin: -1px;
+                              overflow: hidden;
+                              clip: rect(0, 0, 0, 0);
+                              white-space: nowrap;
+                              border: 0;
+                            }
+                            </style>
+                            
+                            <section class="cleanliness-section">
+                              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/18e6bac1d6b33b9b7cd0c622bfbd0b0de7e46ab70899822502a2f854d31a88c4?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="background-image" alt="" />
+                              <div class="content-container">
+                                <header class="header-container">
+                                  <h2 class="section-title">Assuring Cleanliness</h2>
+                                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ad921723622aac97cb74b448fbb3fc5c4d0d752c88a742006dae412839fb4ee?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="icon" alt="Cleanliness icon" />
+                                </header>
+                                <p class="description">
+                                  Rigid 4-Step Sterilization process, assuring <br /> a safe a spotless clinic.
+                                </p>
+                                <div class="cta-container">
+                                  <a href="#" class="cta-text" tabindex="0">Learn More</a>
+                                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02dad6a42398679f3775eb7cc83f4442765dc44e7f583309647c0a440c0b4d51?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="cta-icon" alt="" />
+                                </div>
+                              </div>
+                            </section>
+                        <style>
+                            .aips-container {
+                              display: flex;
+                              flex-direction: column;
+                            }
+                            
+                            .aips-content {
+                              border-radius: 24px;
+                              background-color: #fff9f4;
+                              display: flex;
+                              width: 100%;
+                              flex-direction: column;
+                              overflow: hidden;
+                            }
+                            
+                            .aips-inner {
+                              display: flex;
+                              flex-direction: column;
+                              position: relative;
+                              min-height: 640px;
+                              width: 100%;
+                              align-items: start;
+                              justify-content: center;
+                              padding: 147px 80px;
+                            }
+                            
+                            .aips-background {
+                              position: absolute;
+                              inset: 0;
+                              height: 100%;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            }
+                            
+                            .aips-info-box {
+                              position: relative;
+                              border-radius: 24px;
+                              background-color: #36261d;
+                              display: flex;
+                              margin-bottom: -29px;
+                              width: 543px;
+                              max-width: 100%;
+                              flex-direction: column;
+                              align-items: start;
+                              padding: 41px 40px 41px 40px;
+                            }
+                            
+                            .aips-header {
+                              display: flex;
+                              gap: 19px;
+                              white-space: nowrap;
+                            }
+                            
+                            .aips-title-wrapper {
+                              display: flex;
+                              flex-direction: column;
+                            }
+                            
+                            .aips-subtitle {
+                              color: #fff;
+                              font: 400 24px/1.3 Open Sans, sans-serif;
+                            }
+                            
+                            .aips-title {
+                              color: #fff;
+                              align-self: start;
+                              margin-top: 16px;
+                              font: 700 50px/1.2 Raleway, sans-serif;
+                            }
+                            
+                            .aips-divider {
+                              aspect-ratio: 12.05;
+                              object-fit: contain;
+                              object-position: center;
+                              width: 120px;
+                              stroke-width: 10px;
+                              stroke: #ea7d28;
+                              align-self: end;
+                              margin-top: 49px;
+                              max-width: 100%;
+                            }
+                            
+                            .aips-description {
+                              color: #fff;
+                              margin-top: 47px;
+                              font: 300 24px/31px Open Sans, sans-serif;
+                            }
+                            
+                            .aips-cta {
+                              display: flex;
+                              margin-top: 44px;
+                              align-items: center;
+                              gap: 16px;
+                              color: #ea7d28;
+                              justify-content: start;
+                              font: 700 20px/1.3 Raleway, sans-serif;
+                            }
+                            
+                            .aips-cta-text {
+                              align-self: stretch;
+                              margin: auto 0;
+                            }
+                            
+                            .aips-cta-icon {
+                              aspect-ratio: 1;
+                              object-fit: contain;
+                              object-position: center;
+                              width: 23px;
+                              align-self: stretch;
+                              margin: auto 0;
+                            }
+                            
+                            @media (max-width: 991px) {
+                              .aips-content {
+                                max-width: 100%;
+                              }
+                            
+                              .aips-inner {
+                                max-width: 100%;
+                                padding: 100px 20px;
+                              }
+                            
+                              .aips-info-box {
+                                margin-bottom: 10px;
+                                padding: 0 20px;
+                              }
+                            
+                              .aips-header {
+                                white-space: initial;
+                              }
+                            
+                              .aips-title-wrapper {
+                                white-space: initial;
+                              }
+                            
+                              .aips-title {
+                                font-size: 40px;
+                              }
+                            
+                              .aips-divider {
+                                margin-top: 40px;
+                              }
+                            
+                              .aips-description {
+                                margin-top: 40px;
+                              }
+                            
+                              .aips-cta {
+                                margin-top: 40px;
+                              }
+                            }
+                            
+                            .visually-hidden {
+                              position: absolute;
+                              width: 1px;
+                              height: 1px;
+                              padding: 0;
+                              margin: -1px;
+                              overflow: hidden;
+                              clip: rect(0, 0, 0, 0);
+                              white-space: nowrap;
+                              border: 0;
+                            }
+                            </style>
+                            
+                            <section class="aips-container">
+                              <div class="aips-content">
+                                <div class="aips-inner">
+                                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/620f6529492137d5f7693e5510d882a62e23d51debbf916f988f5e5218082152?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="aips-background" alt="" />
+                                  <div class="aips-info-box">
+                                    <header class="aips-header">
+                                      <div class="aips-title-wrapper">
+                                        <p class="aips-subtitle">Experience</p>
+                                        <h2 class="aips-title">AIPS</h2>
+                                      </div>
+                                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ad921723622aac97cb74b448fbb3fc5c4d0d752c88a742006dae412839fb4ee?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="aips-divider" alt="" />
+                                    </header>
+                                    <p class="aips-description">
+                                      Our AI- Powered Sterilization (AIPS) Monitoring system from DORI, USA
+                                      <br />
+                                      Exclusively at Clove
+                                    </p>
+                                    <div class="aips-cta">
+                                      <span class="aips-cta-text">Learn More</span>
+                                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2ae83dfaa495cb8a0209391023b812658f7ed061f9f2c8d43604d098b1b0a575?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="aips-cta-icon" alt="" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                            <style>
+                                .safety-section {
+                                  display: flex;
+                                  flex-direction: column;
+                                  position: relative;
+                                  min-height: 640px;
+                                  width: 100%;
+                                  align-items: flex-start;
+                                  justify-content: center;
+                                  padding: 147px 80px;
+                                }
+                                
+                                .safety-background {
+                                  position: absolute;
+                                  inset: 0;
+                                  height: 100%;
+                                  width: 100%;
+                                  object-fit: cover;
+                                  object-position: center;
+                                }
+                                
+                                .safety-content {
+                                  position: relative;
+                                  border-radius: 24px;
+                                  background-color: rgba(67, 57, 67, 1);
+                                  display: flex;
+                                  margin-bottom: -29px;
+                                  width: 543px;
+                                  max-width: 100%;
+                                  flex-direction: column;
+                                  align-items: flex-start;
+                                  padding: 48px 44px 28px;
+                                }
+                                
+                                .safety-title-wrapper {
+                                  align-self: stretch;
+                                  display: flex;
+                                  font-size: 50px;
+                                  white-space: nowrap;
+                                  line-height: 60px;
+                                }
+                                
+                                .safety-title {
+                                  margin-right: -213px;
+                                  flex-grow: 1;
+                                  width: fit-content;
+                                }
+                                
+                                .safety-divider {
+                                  aspect-ratio: 27.03;
+                                  object-fit: contain;
+                                  object-position: center;
+                                  width: fit-content;
+                                  stroke-width: 10px;
+                                  stroke: var(--Orange, #ea7d28);
+                                  align-self: flex-start;
+                                  margin-top: 81px;
+                                  flex-grow: 1;
+                                  flex-basis: 0;
+                                }
+                                
+                                .safety-description {
+                                  margin-top: 59px;
+                                  font: 300 24px/31px Open Sans, sans-serif;
+                                }
+                                
+                                .safety-cta {
+                                  display: flex;
+                                  margin-top: 42px;
+                                  align-items: center;
+                                  gap: 16px;
+                                  font-size: 20px;
+                                  color: var(--Orange, #ea7d28);
+                                  line-height: 1.3;
+                                  justify-content: flex-start;
+                                }
+                                
+                                .safety-cta-text {
+                                  align-self: stretch;
+                                  margin: auto 0;
+                                }
+                                
+                                .safety-cta-icon {
+                                  aspect-ratio: 1;
+                                  object-fit: contain;
+                                  object-position: center;
+                                  width: 23px;
+                                  align-self: stretch;
+                                  margin: auto 0;
+                                }
+                                
+                                @media (max-width: 991px) {
+                                  .safety-section {
+                                    max-width: 100%;
+                                    padding: 100px 20px;
+                                  }
+                                
+                                  .safety-content {
+                                    margin-bottom: 10px;
+                                    padding: 0 20px;
+                                  }
+                                
+                                  .safety-title-wrapper {
+                                    font-size: 40px;
+                                    line-height: 53px;
+                                    white-space: initial;
+                                  }
+                                
+                                  .safety-title {
+                                    font-size: 40px;
+                                    line-height: 53px;
+                                    white-space: initial;
+                                  }
+                                
+                                  .safety-divider {
+                                    margin-top: 40px;
+                                  }
+                                
+                                  .safety-description {
+                                    margin-top: 40px;
+                                  }
+                                
+                                  .safety-cta {
+                                    margin-top: 40px;
+                                  }
+                                }
+                                
+                                .visually-hidden {
+                                  position: absolute;
+                                  width: 1px;
+                                  height: 1px;
+                                  padding: 0;
+                                  margin: -1px;
+                                  overflow: hidden;
+                                  clip: rect(0, 0, 0, 0);
+                                  white-space: nowrap;
+                                  border: 0;
+                                }
+                                </style>
+                                
+                                <section class="safety-section">
+                                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c89417e4290cd10055a2edbf700142be9193a9457c9b69d58e19da47616f3638?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="safety-background" />
+                                  <div class="safety-content">
+                                    <div class="safety-title-wrapper">
+                                      <h2 class="safety-title">Uncompromised <br /> Safety</h2>
+                                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4227e1247e02d028f3beb103b5f6000108e0c97c81aa35b5c717741852b75ad0?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="safety-divider" />
+                                    </div>
+                                    <p class="safety-description">10X Safety Protocols for a secure and worry-free dental experience</p>
+                                    <div class="safety-cta">
+                                      <a href="#" class="safety-cta-text" tabindex="0">Learn More</a>
+                                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/59825d245d4b8bbe47a00660440d3ed600f7ee996f915f03f14d4a991fd0ed83?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="safety-cta-icon" />
+                                    </div>
+                                  </div>
+                                </section>
+ <style>
+    .blog-hub {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 104px 0;
+    }
+    .blog-content {
+      background-color: #fff9f4;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 108px;
+    }
+    .blog-header {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      line-height: 1.3;
+      justify-content: start;
+    }
+    .blog-title {
+      color: #303030;
+      font: 700 40px Raleway, sans-serif;
+    }
+    .category-list {
+      align-self: center;
+      display: flex;
+      margin-top: 40px;
+      align-items: center;
+      gap: 16px;
+      color: #878787;
+      justify-content: start;
+      flex-wrap: wrap;
+      font: 400 24px Open Sans, sans-serif;
+    }
+    .category-item {
+      align-self: stretch;
+      margin: auto 0;
+    }
+    .category-item.active {
+      color: #ea7d28;
+      font-family: Raleway, sans-serif;
+      font-weight: 700;
+    }
+    .category-divider {
+      align-self: stretch;
+      width: 0;
+      height: 30px;
+      margin: auto 0;
+      border: 1px solid #b0b0b0;
+    }
+    .blog-grid {
+      align-self: end;
+      display: flex;
+      margin-top: 72px;
+      width: 100%;
+      max-width: 1704px;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .blog-row {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 40px;
+      overflow: hidden;
+      justify-content: start;
+    }
+    .blog-card {
+      display: flex;
+      min-width: 240px;
+      gap: 24px;
+      justify-content: start;
+      flex-wrap: wrap;
+    }
+    .blog-image {
+      align-self: end;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 144px;
+    }
+    .blog-image img {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 144px;
+      border-radius: 12px;
+      max-width: 100%;
+    }
+    .blog-details {
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      font-family: Open Sans, sans-serif;
+      justify-content: space-between;
+      width: 372px;
+      padding: 8px 0;
+    }
+    .blog-card-title {
+      color: #303030;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 31px;
+    }
+    .blog-meta {
+      align-self: start;
+      display: flex;
+      margin-top: 35px;
+      align-items: start;
+      gap: 10px;
+      font-size: 18px;
+      color: #7d7d7d;
+      font-weight: 400;
+      line-height: 1.3;
+      justify-content: start;
+    }
+    .meta-divider {
+      width: 0;
+      height: 14px;
+      border: 1px solid #7d7d7d;
+    }
+    .pagination {
+      display: flex;
+      margin-top: 40px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .pagination-dots {
+      align-self: end;
+      display: flex;
+      align-items: start;
+      gap: 20px;
+      justify-content: start;
+    }
+    .pagination-dot {
+      background-color: #ffe5b3;
+      border-radius: 50%;
+      display: flex;
+      min-height: 40px;
+      width: 40px;
+      height: 40px;
+    }
+    .explore-more {
+      display: flex;
+      margin-top: 40px;
+      width: 100%;
+      align-items: center;
+      gap: 1px;
+      color: #4d2c19;
+      justify-content: center;
+      font: 700 24px/1.3 Raleway, sans-serif;
+    }
+    .explore-more-content {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+      margin: auto 0;
+    }
+    .explore-more-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 23px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    .explore-more-text {
+      text-decoration-line: underline;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    .explore-more-arrow {
+      object-fit: contain;
+      object-position: center;
+      width: 18px;
+      stroke-width: 2px;
+      stroke: #ea7d28;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    @media (max-width: 991px) {
+      .blog-hub {
+        padding-bottom: 100px;
+      }
+      .blog-content {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      .blog-header,
+      .category-list,
+      .blog-grid,
+      .blog-row,
+      .blog-card,
+      .explore-more {
+        max-width: 100%;
+      }
+      .blog-grid {
+        margin-top: 40px;
+      }
+    }
+  </style>
+  
+  <section class="blog-hub">
+    <div class="blog-content">
+      <header class="blog-header">
+        <h1 class="blog-title">Journey Through Knowledge: Blog Hub</h1>
+        <nav class="category-list">
+          <span class="category-item active">General Dentistry</span>
+          <span class="category-divider"></span>
+          <span class="category-item">Cosmetics Dentistry</span>
+          <span class="category-divider"></span>
+          <span class="category-item">Crowns & Bridges</span>
+          <span class="category-divider"></span>
+          <span class="category-item">Nutrition</span>
+          <span class="category-divider"></span>
+          <span class="category-item">Oral Surgery</span>
+          <span class="category-divider"></span>
+          <span class="category-item">Root Canal</span>
+          <span class="category-divider"></span>
+          <span class="category-item">Implants & Dentures</span>
+        </nav>
+      </header>
+      <main class="blog-grid">
+        <div class="blog-row">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e63f8afd8f619c2a4cf69b0c44492dc5b0a0385fdea8e974b3bc9ca1c01a9d6b?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e63f8afd8f619c2a4cf69b0c44492dc5b0a0385fdea8e974b3bc9ca1c01a9d6b?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e63f8afd8f619c2a4cf69b0c44492dc5b0a0385fdea8e974b3bc9ca1c01a9d6b?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="blog-row">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e63f8afd8f619c2a4cf69b0c44492dc5b0a0385fdea8e974b3bc9ca1c01a9d6b?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e63f8afd8f619c2a4cf69b0c44492dc5b0a0385fdea8e974b3bc9ca1c01a9d6b?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e63f8afd8f619c2a4cf69b0c44492dc5b0a0385fdea8e974b3bc9ca1c01a9d6b?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="blog-row">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2c8a4fd276e86c45de36f7449a79a7da24f649330e2259ef601a83e93f9a85f?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2c8a4fd276e86c45de36f7449a79a7da24f649330e2259ef601a83e93f9a85f?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2c8a4fd276e86c45de36f7449a79a7da24f649330e2259ef601a83e93f9a85f?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Blog post thumbnail" />
+            </div>
+            <div class="blog-details">
+              <h2 class="blog-card-title">Dry Sockets Demystified: Understanding the connection to tooth extraction</h2>
+              <div class="blog-meta">
+                <time datetime="2024-02-12">12th Feb 2024</time>
+                <span class="meta-divider"></span>
+                <span>2 min read</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+      <div class="pagination">
+        <div class="pagination-dots">
+          <div class="pagination-dot"></div>
+          <div class="pagination-dot"></div>
+        </div>
+        <div class="explore-more">
+          <div class="explore-more-content">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/09372385befef2d38feaff004312401835a08176fe7e01a080ca5250f77393e1?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="explore-more-icon" />
+            <span class="explore-more-text">Explore More</span>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f3df159271cfb26f56f5b3e65ddde654c32c96f2843256fd070ff729cf06acc?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="explore-more-arrow" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .corporate-trust {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 355px 80px 0;
+    }
+    
+    .trust-card {
+      border-radius: 20px;
+      box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
+      background-color: #fff;
+      display: flex;
+      width: 100%;
+      max-width: 1440px;
+      flex-direction: column;
+      padding: 40px 60px;
+    }
+    
+    .trust-content {
+      align-self: center;
+      display: flex;
+      width: 1260px;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    
+    .trust-header {
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .trust-numbers {
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      font-weight: 700;
+    }
+    
+    .trust-count {
+      color: #ea7d28;
+      letter-spacing: 0.72px;
+      font: 72px/1 Open Sans, sans-serif;
+    }
+    
+    .trust-title {
+      color: #000;
+      margin-top: 16px;
+      font: 700 40px/1.3 Raleway, sans-serif;
+    }
+    
+    .trust-description {
+      color: #474747;
+      margin-top: 24px;
+      font: 400 24px/1.3 Open Sans, sans-serif;
+    }
+    
+    .trust-image {
+      aspect-ratio: 17.54;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      margin-top: 61px;
+    }
+    
+    .trust-actions {
+      display: flex;
+      margin-top: 62px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      font: 24px Raleway, sans-serif;
+    }
+    
+    .book-appointment {
+      align-self: stretch;
+      border-radius: 50px;
+      background-color: #f8943f;
+      min-height: 72px;
+      width: 400px;
+      max-width: 100%;
+      color: #fff;
+      font-weight: 500;
+      padding: 28px 55px;
+      border: 1px solid #de6f0d;
+    }
+    
+    .register-company {
+      display: flex;
+      margin-top: 62px;
+      height: 14px;
+      align-items: center;
+      gap: 16px;
+      color: #4d2c19;
+      font-weight: 700;
+      line-height: 1.3;
+      justify-content: center;
+    }
+    
+    .register-link {
+      text-decoration-line: underline;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .register-icon {
+      aspect-ratio: 1.43;
+      object-fit: contain;
+      object-position: center;
+      width: 20px;
+      stroke-width: 2px;
+      stroke: #ea7d28;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    @media (max-width: 991px) {
+      .corporate-trust {
+        padding: 100px 20px 0;
+      }
+    
+      .trust-card {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    
+      .trust-header {
+        max-width: 100%;
+      }
+    
+      .trust-count {
+        font-size: 40px;
+      }
+    
+      .trust-description {
+        max-width: 100%;
+      }
+    
+      .trust-image {
+        margin-top: 40px;
+      }
+    
+      .trust-actions {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .book-appointment {
+        padding: 0 20px;
+      }
+    
+      .register-company {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <section class="corporate-trust">
+      <div class="trust-card">
+        <div class="trust-content">
+          <header class="trust-header">
+            <div class="trust-numbers">
+              <h2 class="trust-count">250+</h2>
+              <h3 class="trust-title">Corporate Trust Us</h3>
+            </div>
+            <p class="trust-description">Check if your company is one of them & avail exclusive benefits</p>
+          </header>
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/627567273b783e0dce4b60ac16940aff8eb1a14f8da3b23c9083bc400cbe3a05?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="trust-image" alt="Corporate trust illustration" />
+        </div>
+        <div class="trust-actions">
+          <button class="book-appointment">Book Appointment</button>
+          <div class="register-company">
+            <a href="#" class="register-link">Register your company</a>
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a3204c35ae6252d663769ad741667ee7154a8e9bf0f9e11a8e39f75820f00dd?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="register-icon" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+        .beyond-dentistry-section {
+          display: flex;
+          flex-direction: column;
+          line-height: 1.3;
+          justify-content: center;
+          padding: 80px 115px;
+        }
+        
+        @media (max-width: 991px) {
+          .beyond-dentistry-section {
+            padding: 0 20px;
+          }
+        }
+        
+        .content-wrapper {
+          border-radius: 30px;
+          background-color: #FFF9F4;
+          display: flex;
+          width: 100%;
+          max-width: 1690px;
+          flex-direction: column;
+          justify-content: start;
+          padding: 100px 125px;
+        }
+        
+        @media (max-width: 991px) {
+          .content-wrapper {
+            max-width: 100%;
+            padding: 0 20px;
+          }
+        }
+        
+        .header-container {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        @media (max-width: 991px) {
+          .header-container {
+            max-width: 100%;
+          }
+        }
+        
+        .main-title {
+          color: #303030;
+          font: 700 40px Raleway, sans-serif;
+        }
+        
+        .subtitle {
+          color: #474747;
+          margin-top: 24px;
+          font: 400 24px Open Sans, sans-serif;
+        }
+        
+        .features-grid {
+          display: flex;
+          margin-top: 60px;
+          align-items: start;
+          gap: 40px 80px;
+          color: #303030;
+          justify-content: start;
+          flex-wrap: wrap;
+          font: 600 24px Open Sans, sans-serif;
+        }
+        
+        @media (max-width: 991px) {
+          .features-grid {
+            max-width: 100%;
+            margin-top: 40px;
+          }
+        }
+        
+        .feature-card {
+          border-radius: 10px;
+          background-color: #FFFFFF;
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+          display: flex;
+          min-width: 240px;
+          min-height: 233px;
+          align-items: center;
+          gap: 24px;
+          text-align: center;
+          justify-content: center;
+          width: 300px;
+          padding: 48px 30px;
+        }
+        
+        @media (max-width: 991px) {
+          .feature-card {
+            padding: 0 20px;
+          }
+        }
+        
+        .feature-content {
+          align-self: stretch;
+          display: flex;
+          min-height: 137px;
+          width: 220px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          margin: auto 0;
+        }
+        
+        .feature-icon {
+          aspect-ratio: 1.79;
+          object-fit: contain;
+          object-position: center;
+          width: 117px;
+          max-width: 100%;
+        }
+        
+        .feature-title {
+          margin-top: 55px;
+        }
+        
+        @media (max-width: 991px) {
+          .feature-title {
+            margin-top: 40px;
+          }
+        }
+        
+        .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        </style>
+        
+        <section class="beyond-dentistry-section">
+          <div class="content-wrapper">
+            <header class="header-container">
+              <h1 class="main-title">Beyond Dentistry</h1>
+              <p class="subtitle">Mapping success in every area</p>
+            </header>
+            <div class="features-grid">
+              <article class="feature-card">
+                <div class="feature-content">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6b7730feed05b360ccbf5b70b2678f819d70b4739cb42f8df5d000a7f375462?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="feature-icon" alt="Educational Videos icon" />
+                  <h2 class="feature-title">Educational Videos</h2>
+                </div>
+              </article>
+              <article class="feature-card">
+                <div class="feature-content">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e53cdb2e58c33368ced86446e6a74993ae44be3cabf47d8e2a20a1099dadc51f?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="feature-icon" alt="News & Media icon" />
+                  <h2 class="feature-title">News & Media</h2>
+                </div>
+              </article>
+              <article class="feature-card">
+                <div class="feature-content">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3604e9ace50e5a034e77ef33e5e3e59d0cafd53f00ffe800c35aa99b60fe353e?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="feature-icon" alt="Rewards icon" />
+                  <h2 class="feature-title">Rewards</h2>
+                </div>
+              </article>
+              <article class="feature-card">
+                <div class="feature-content">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f4cde8f9ac5394d7643ca64daf513cbac6891e5c16bfe998cc11b0aca066630?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="feature-icon" alt="Careers icon" />
+                  <h2 class="feature-title">Careers</h2>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <style>
+            .faq-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              color: #303030;
+              justify-content: center;
+              padding: 80px 210px;
+            }
+            
+            @media (max-width: 991px) {
+              .faq-container {
+                padding: 0 20px;
+              }
+            }
+            
+            .faq-content {
+              display: flex;
+              flex-direction: column;
+              justify-content: start;
+            }
+            
+            @media (max-width: 991px) {
+              .faq-content {
+                max-width: 100%;
+              }
+            }
+            
+            .faq-title {
+              font: 700 40px/1.3 Raleway, sans-serif;
+            }
+            
+            @media (max-width: 991px) {
+              .faq-title {
+                max-width: 100%;
+              }
+            }
+            
+            .faq-list {
+              display: flex;
+              margin-top: 80px;
+              align-items: start;
+              gap: 40px 104px;
+              justify-content: start;
+              flex-wrap: wrap;
+              font: 600 24px/31px Open Sans, sans-serif;
+            }
+            
+            @media (max-width: 991px) {
+              .faq-list {
+                max-width: 100%;
+                margin-top: 40px;
+              }
+            }
+            
+            .faq-column {
+              display: flex;
+              min-width: 240px;
+              flex-direction: column;
+              justify-content: start;
+              width: 698px;
+            }
+            
+            @media (max-width: 991px) {
+              .faq-column {
+                max-width: 100%;
+              }
+            }
+            
+            .faq-item {
+              display: flex;
+              max-width: 100%;
+              width: 698px;
+              align-items: center;
+              gap: 40px 100px;
+              justify-content: space-between;
+              flex-wrap: wrap;
+            }
+            
+            .faq-question {
+              leading-trim: both;
+              text-edge: cap;
+              align-self: stretch;
+              width: 507px;
+              margin: auto 0;
+            }
+            
+            @media (max-width: 991px) {
+              .faq-question {
+                max-width: 100%;
+              }
+            }
+            
+            .toggle-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 16px;
+              fill: #ea7d28;
+              align-self: stretch;
+              margin: auto 0;
+            }
+            
+            .faq-divider {
+              min-height: 2px;
+              margin-top: 32px;
+              max-width: 100%;
+              width: 698px;
+              border: 2px solid #ececec;
+            }
+            
+            .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              white-space: nowrap;
+              border: 0;
+            }
+            </style>
+            
+            <section class="faq-container">
+              <div class="faq-content">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                  <div class="faq-column">
+                    <div class="faq-item">
+                      <p class="faq-question">Can I choose the dentist on my own for treatment?</p>
+                      <button class="toggle-icon" aria-label="Toggle answer">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f6cad98bdbfe389d2040e1bcd57738439a6de7707347b4e0a924b9efaa00a85?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" />
+                      </button>
+                    </div>
+                    <div class="faq-divider"></div>
+                    <div class="faq-item">
+                      <p class="faq-question">Will I get the same doctor each time I visit the same clinic?</p>
+                      <button class="toggle-icon" aria-label="Toggle answer">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f6cad98bdbfe389d2040e1bcd57738439a6de7707347b4e0a924b9efaa00a85?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" />
+                      </button>
+                    </div>
+                    <div class="faq-divider"></div>
+                    <div class="faq-item">
+                      <p class="faq-question">How are you able to provide lower prices than other dental brands?</p>
+                      <button class="toggle-icon" aria-label="Toggle answer">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f6cad98bdbfe389d2040e1bcd57738439a6de7707347b4e0a924b9efaa00a85?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="faq-column">
+                    <div class="faq-item">
+                      <p class="faq-question">Can I choose the dentist on my own for treatment?</p>
+                      <button class="toggle-icon" aria-label="Toggle answer">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f6cad98bdbfe389d2040e1bcd57738439a6de7707347b4e0a924b9efaa00a85?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" />
+                      </button>
+                    </div>
+                    <div class="faq-divider"></div>
+                    <div class="faq-item">
+                      <p class="faq-question">Will I get the same doctor each time I visit the same clinic?</p>
+                      <button class="toggle-icon" aria-label="Toggle answer">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f6cad98bdbfe389d2040e1bcd57738439a6de7707347b4e0a924b9efaa00a85?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" />
+                      </button>
+                    </div>
+                    <div class="faq-divider"></div>
+                    <div class="faq-item">
+                      <p class="faq-question">How are you able to provide lower prices than other dental brands?</p>
+                      <button class="toggle-icon" aria-label="Toggle answer">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f6cad98bdbfe389d2040e1bcd57738439a6de7707347b4e0a924b9efaa00a85?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" />
+                      </button>
+                    </div>
+                    <div class="faq-divider"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <style>
+                .footer { background-color: #3d2010; padding: 80px 80px 40px; }
+                .footer-content { max-width: 1496px; margin: 0 auto; }
+                .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+                .footer-column { color: #ffefe2; }
+                .footer-heading { font: 500 36px Raleway, sans-serif; margin-bottom: 40px; }
+                .footer-list { font: 300 24px Open Sans, sans-serif; }
+                .footer-item { margin-top: 27px; }
+                .footer-item:first-child { margin-top: 0; }
+                .social-icons { display: flex; gap: 48px; margin-top: 40px; }
+                .social-icon { width: 36px; height: 36px; }
+                .social-icon-linkedin { width: 52px; height: 36px; }
+                .footer-logo { max-width: 100%; margin: 20px 0 0 37px; }
+                .footer-copyright { color: #9f9f9f; margin-top: 60px; font: 300 24px/1.3 Open Sans, sans-serif; }
+                
+                @media (max-width: 991px) {
+                    .footer { padding: 40px 20px; }
+                    .footer-content { width: 100%; }
+                    .footer-logo { margin-left: 0; }
+                    .footer-copyright { margin-top: 40px; }
+                }
+                </style>
+                
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div class="footer-grid">
+                            <section class="footer-column">
+                                <h2 class="footer-heading">Treatments</h2>
+                                <ul class="footer-list">
+                                    <li class="footer-item">Laser Dentistery</li>
+                                    <li class="footer-item">Dental fillings</li>
+                                    <li class="footer-item">Root canal Treatment</li>
+                                    <li class="footer-item">Wisdom Teeth removal</li>
+                                    <li class="footer-item">Braces & Aligners</li>
+                                    <li class="footer-item">Clear Aligners</li>
+                                    <li class="footer-item">Dental Implants</li>
+                                    <li class="footer-item">Dental Implants</li>
+                                </ul>
+                            </section>
+                            
+                            <section class="footer-column">
+                                <h2 class="footer-heading">Quick Links</h2>
+                                <ul class="footer-list">
+                                    <li class="footer-item">Home</li>
+                                    <li class="footer-item">Services</li>
+                                    <li class="footer-item">About Us</li>
+                                    <li class="footer-item">Locations</li>
+                                    <li class="footer-item">Book Appointments</li>
+                                    <li class="footer-item">Contact Us</li>
+                                </ul>
+                            </section>
+                            
+                            <section class="footer-column">
+                                <h2 class="footer-heading">Explore Clove</h2>
+                                <ul class="footer-list">
+                                    <li class="footer-item">Our Team</li>
+                                    <li class="footer-item">Clinic Overview</li>
+                                    <li class="footer-item">Testimonials</li>
+                                    <li class="footer-item">Blogs</li>
+                                    <li class="footer-item">News</li>
+                                </ul>
+                            </section>
+                            
+                            <section class="footer-column">
+                                <h2 class="footer-heading">Legal</h2>
+                                <ul class="footer-list">
+                                    <li class="footer-item">Privacy Policy</li>
+                                    <li class="footer-item">Terms of service</li>
+                                    <li class="footer-item">Accessibility</li>
+                                </ul>
+                            </section>
+                            
+                            <section class="footer-column">
+                                <h2 class="footer-heading">Connect with Us</h2>
+                                <div class="social-icons">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/987b36b015daff215ecd4d1affcff01b6553fd48f3a2df2b8d33d2b7d78c21ee?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Facebook" class="social-icon" />
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d1ebabdbece4c21419c15b0437662d3d7c5af657b7db9968952beca58e53372d?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Twitter" class="social-icon" />
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/def4d2758dcecf0c901b0bf46d03b11f85f7e42e629d26e1d14f64c589a16571?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="LinkedIn" class="social-icon-linkedin" />
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/70ff9a4023dc33f0d433e6486d01f1cf16063b61997a7004b20d5e9061ed8ea8?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Clove Dental Logo" class="footer-logo" />
+                        
+                        <p class="footer-copyright">
+                            All Rights Reserved - 2024, Clove Dental (a brand name of M/s. Star Dental Centre Private Limited)
+                        </p>
+                    </div>
+                </footer>
+                <style>
+                    .braces-showcase {
+                      border-radius: 10px;
+                      overflow-x: auto;
+                      display: flex;
+                      align-items: flex-start;
+                      gap: 24px;
+                    }
+                    
+                    .braces-card {
+                      display: flex;
+                      min-width: 240px;
+                      flex-direction: column;
+                      width: 348px;
+                    }
+                    
+                    .braces-image-wrapper {
+                      display: flex;
+                      max-width: 100%;
+                      width: 348px;
+                      flex-direction: column;
+                    }
+                    
+                    .braces-image {
+                      aspect-ratio: 0.65;
+                      object-fit: contain;
+                      object-position: center;
+                      width: 100%;
+                      border-radius: 10px;
+                    }
+                    
+                    .braces-info {
+                      display: flex;
+                      margin-top: 24px;
+                      width: 316px;
+                      max-width: 100%;
+                      align-items: center;
+                      gap: 40px 109px;
+                      font-family: Open Sans, sans-serif;
+                      font-weight: 600;
+                      white-space: nowrap;
+                    }
+                    
+                    .braces-text-container {
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: column;
+                      margin: auto 0;
+                    }
+                    
+                    .braces-name {
+                      color: #4d2c19;
+                      font-size: 16px;
+                    }
+                    
+                    .braces-type {
+                      color: #ea7d28;
+                      font-size: 20px;
+                      margin-top: 9px;
+                    }
+                    
+                    .featured-braces-card {
+                      position: relative;
+                      aspect-ratio: 0.646;
+                      width: 100%;
+                      padding: 470px 16px 16px;
+                      border-radius: 10px;
+                    }
+                    
+                    .featured-braces-image {
+                      position: absolute;
+                      inset: 0;
+                      height: 100%;
+                      width: 100%;
+                      object-fit: cover;
+                      object-position: center;
+                    }
+                    
+                    .featured-braces-content {
+                      position: relative;
+                      display: flex;
+                      width: 100%;
+                      align-items: center;
+                      gap: 40px 109px;
+                    }
+                    
+                    .featured-braces-text {
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: column;
+                      font-family: Open Sans, sans-serif;
+                      font-weight: 600;
+                      white-space: nowrap;
+                      margin: auto 0;
+                    }
+                    
+                    .featured-braces-type {
+                      color: #ea7d28;
+                      font-size: 20px;
+                    }
+                    
+                    .featured-braces-name {
+                      color: #ffefe2;
+                      font-size: 16px;
+                      margin-top: 9px;
+                    }
+                    
+                    .consult-button {
+                      align-self: stretch;
+                      border-radius: 10px;
+                      background-color: #f6841f;
+                      color: #fff;
+                      padding: 20px 12px;
+                      font: 500 18px Raleway, sans-serif;
+                      border: none;
+                      cursor: pointer;
+                    }
+                    
+                    @media (max-width: 991px) {
+                      .braces-info,
+                      .braces-text-container,
+                      .featured-braces-text {
+                        white-space: initial;
+                      }
+                    
+                      .featured-braces-card {
+                        padding-top: 100px;
+                      }
+                    }
+                    </style>
+                    
+                    <section class="braces-showcase">
+                      <article class="braces-card">
+                        <div class="braces-image-wrapper">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0c2382498fdc81874935e390ac1e1edba6df2963f6916a1ceebeb6761573fad?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="braces-image" alt="Braces type 1" />
+                        </div>
+                        <div class="braces-info">
+                          <div class="braces-text-container">
+                            <h3 class="braces-name">Shubham</h3>
+                            <p class="braces-type">Braces</p>
+                          </div>
+                        </div>
+                      </article>
+                    
+                      <article class="braces-card">
+                        <div class="braces-image-wrapper">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8287e398c5f7e68a7714ae6b85e6cb9119b28a64f21efebe2b093fdae84d0bfc?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="braces-image" alt="Braces type 2" />
+                        </div>
+                        <div class="braces-info">
+                          <div class="braces-text-container">
+                            <h3 class="braces-name">Shubham</h3>
+                            <p class="braces-type">Braces</p>
+                          </div>
+                        </div>
+                      </article>
+                    
+                      <article class="braces-card">
+                        <div class="braces-image-wrapper">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/232bf01b771604cae057df9ea9453199c40a1895ba922b5c0321d4ddf3108d80?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="braces-image" alt="Braces type 3" />
+                        </div>
+                        <div class="braces-info">
+                          <div class="braces-text-container">
+                            <h3 class="braces-name">Shubham</h3>
+                            <p class="braces-type">Braces</p>
+                          </div>
+                        </div>
+                      </article>
+                    
+                      <article class="braces-card">
+                        <div class="braces-image-wrapper">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6c58d079399a112541f45649449ad2fbd654531e02e5f0233c6e8e0666fb64ef?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="braces-image" alt="Braces type 4" />
+                        </div>
+                        <div class="braces-info">
+                          <div class="braces-text-container">
+                            <h3 class="braces-name">Shubham</h3>
+                            <p class="braces-type">Braces</p>
+                          </div>
+                        </div>
+                      </article>
+                    
+                      <article class="braces-card">
+                        <div class="braces-image-wrapper">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d63f8324e3d37a12022cbd5992e1fbd2a7246d2b1ade1a05f25b991ca78996d?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="braces-image" alt="Braces type 5" />
+                        </div>
+                        <div class="braces-info">
+                          <div class="braces-text-container">
+                            <h3 class="braces-name">Shubham</h3>
+                            <p class="braces-type">Braces</p>
+                          </div>
+                        </div>
+                      </article>
+                    
+                      <article class="braces-card">
+                        <div class="featured-braces-card">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6c58d079399a112541f45649449ad2fbd654531e02e5f0233c6e8e0666fb64ef?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" class="featured-braces-image" alt="Featured braces" />
+                          <div class="featured-braces-content">
+                            <div class="featured-braces-text">
+                              <p class="featured-braces-type">Braces</p>
+                              <h3 class="featured-braces-name">Shubham</h3>
+                            </div>
+                            <button class="consult-button">Consult Now</button>
+                          </div>
+                        </div>
+                        <div class="braces-info">
+                          <div class="braces-text-container">
+                            <p class="braces-type">Braces</p>
+                            <h3 class="braces-name">Shubham</h3>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <style>
+                        .expert-guidance {
+                          display: flex;
+                          align-items: center;
+                          gap: 36px;
+                          justify-content: center;
+                          flex-wrap: wrap;
+                          padding: 60px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .expert-guidance {
+                            padding: 20px;
+                          }
+                        }
+                        
+                        .consultation-card {
+                          border-radius: 24px;
+                          background-color: #fff9f4;
+                          align-self: stretch;
+                          display: flex;
+                          min-width: 240px;
+                          min-height: 786px;
+                          flex-direction: column;
+                          align-items: center;
+                          justify-content: center;
+                          flex: 1;
+                          flex-basis: 0%;
+                          margin: auto 0;
+                          padding: 0 80px 24px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .consultation-card {
+                            max-width: 100%;
+                            padding: 0 20px;
+                          }
+                        }
+                        
+                        .card-header {
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: start;
+                        }
+                        
+                        .card-title {
+                          color: #303030;
+                          font: 700 40px/52px Raleway, sans-serif;
+                        }
+                        
+                        .card-subtitle {
+                          color: #474747;
+                          margin-top: 20px;
+                          font: 400 24px/1.3 Open Sans, sans-serif;
+                        }
+                        
+                        .consultation-form {
+                          display: flex;
+                          margin-top: 92px;
+                          width: 401px;
+                          max-width: 100%;
+                          align-items: start;
+                          gap: 48px 35px;
+                          justify-content: start;
+                          flex-wrap: wrap;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .consultation-form {
+                            margin-top: 40px;
+                          }
+                        }
+                        
+                        .form-group {
+                          display: flex;
+                          min-width: 240px;
+                          flex-direction: column;
+                          justify-content: start;
+                          flex-grow: 1;
+                          width: 321px;
+                        }
+                        
+                        .input-wrapper {
+                          display: flex;
+                          width: 100%;
+                          flex-direction: column;
+                        }
+                        
+                        .input-label {
+                          z-index: 10;
+                          background-color: #fff8f2;
+                          align-self: start;
+                          color: #888;
+                          white-space: nowrap;
+                          margin: -8px 0 0 34px;
+                          padding: 0 5px;
+                          font: 400 20px Switzer, sans-serif;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .input-label {
+                            margin-left: 10px;
+                            white-space: initial;
+                          }
+                        }
+                        
+                        .form-input {
+                          border-radius: 80px;
+                          background-color: #fff;
+                          color: #5e5e5e;
+                          padding: 26px 32px;
+                          font: 600 28px Open Sans, sans-serif;
+                          border: 2px solid #b0b0b0;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .form-input {
+                            padding: 0 20px;
+                          }
+                        }
+                        
+                        .select-wrapper {
+                          display: flex;
+                          margin-top: 32px;
+                          width: 100%;
+                          max-width: 400px;
+                          flex-direction: column;
+                          color: #a0a0a0;
+                          font: 400 24px Open Sans, sans-serif;
+                        }
+                        
+                        .select-container {
+                          border-radius: 80px;
+                          background-color: #fff;
+                          display: flex;
+                          gap: 20px;
+                          justify-content: space-between;
+                          padding: 28px 29px;
+                          border: 2px solid #b0b0b0;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .select-container {
+                            padding: 0 20px;
+                          }
+                        }
+                        
+                        .select-icon {
+                          aspect-ratio: 1.79;
+                          object-fit: contain;
+                          object-position: center;
+                          width: 25px;
+                          fill: #ea7d28;
+                          align-self: start;
+                        }
+                        
+                        .submit-button {
+                          align-self: stretch;
+                          border-radius: 50px;
+                          background-color: #f8943f;
+                          min-width: 240px;
+                          min-height: 72px;
+                          gap: 13px;
+                          color: #fff;
+                          flex-grow: 1;
+                          width: 320px;
+                          padding: 28px 55px;
+                          font: 500 24px Raleway, sans-serif;
+                          border: 1px solid #de6f0d;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .submit-button {
+                            padding: 0 20px;
+                          }
+                        }
+                        
+                        .safety-protocols {
+                          align-self: stretch;
+                          display: flex;
+                          min-width: 240px;
+                          flex-direction: column;
+                          justify-content: start;
+                          width: 934px;
+                          margin: auto 0;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .safety-protocols {
+                            max-width: 100%;
+                          }
+                        }
+                        
+                        .protocols-container {
+                          border-radius: 24px;
+                          background-color: #fbf5ff;
+                          max-width: 100%;
+                          width: 934px;
+                          padding-left: 40px;
+                          overflow: hidden;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .protocols-container {
+                            padding-left: 20px;
+                          }
+                        }
+                        
+                        .protocols-content {
+                          gap: 20px;
+                          display: flex;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .protocols-content {
+                            flex-direction: column;
+                            align-items: stretch;
+                            gap: 0px;
+                          }
+                        }
+                        
+                        .protocols-text {
+                          display: flex;
+                          flex-direction: column;
+                          line-height: normal;
+                          width: 59%;
+                          margin-left: 0px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .protocols-text {
+                            width: 100%;
+                          }
+                        }
+                        
+                        .protocols-header {
+                          z-index: 10;
+                          display: flex;
+                          width: 100%;
+                          padding-bottom: 18px;
+                          flex-direction: column;
+                          align-items: start;
+                          color: #303030;
+                          line-height: 1;
+                          margin: 60px -71px 0 0;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .protocols-header {
+                            max-width: 100%;
+                            margin-top: 40px;
+                          }
+                        }
+                        
+                        .protocols-title {
+                          font: 700 56px Raleway, sans-serif;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .protocols-title {
+                            max-width: 100%;
+                            font-size: 40px;
+                          }
+                        }
+                        
+                        .protocols-details {
+                          align-self: stretch;
+                          display: flex;
+                          margin-top: 24px;
+                          flex-direction: column;
+                          align-items: start;
+                          justify-content: start;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .protocols-details {
+                            max-width: 100%;
+                          }
+                        }
+                        
+                        .dori-info {
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: start;
+                        }
+                        
+                        .dori-title {
+                          font: 300 28px Switzer, sans-serif;
+                        }
+                        
+                        .dori-subtitle {
+                          margin-top: 16px;
+                          font: 400 18px Open Sans, sans-serif;
+                        }
+                        
+                        .protocol-item {
+                          align-self: stretch;
+                          margin-top: 40px;
+                          font: 300 28px Open Sans, sans-serif;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .protocol-item {
+                            max-width: 100%;
+                          }
+                        }
+                        
+                        .learn-more-link {
+                          z-index: 10;
+                          display: flex;
+                          margin-top: -44px;
+                          align-items: center;
+                          gap: 16px;
+                          color: #4d2c19;
+                          justify-content: start;
+                          font: 700 20px/1.3 Raleway, sans-serif;
+                        }
+                        
+                        .learn-more-text {
+                          text-decoration-line: underline;
+                          align-self: stretch;
+                          margin: auto 0;
+                        }
+                        
+                        .learn-more-icon {
+                          aspect-ratio: 1.43;
+                          object-fit: contain;
+                          object-position: center;
+                          width: 20px;
+                          stroke-width: 2px;
+                          stroke: #4d2c19;
+                          align-self: stretch;
+                          margin: auto 0;
+                        }
+                        
+                        .protocols-image {
+                          display: flex;
+                          flex-direction: column;
+                          line-height: normal;
+                          width: 41%;
+                          margin-left: 20px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .protocols-image {
+                            width: 100%;
+                          }
+                        }
+                        
+                        .protocols-img {
+                          aspect-ratio: 0.93;
+                          object-fit: contain;
+                          object-position: center;
+                          width: 100%;
+                          flex-grow: 1;
+                        }
+                        
+                        .info-cards {
+                          display: flex;
+                          margin-top: 24px;
+                          align-items: center;
+                          gap: 34px;
+                          font-family: Raleway, sans-serif;
+                          font-weight: 700;
+                          justify-content: center;
+                          flex-wrap: wrap;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .info-cards {
+                            max-width: 100%;
+                          }
+                        }
+                        
+                        .clinic-card {
+                          align-self: stretch;
+                          display: flex;
+                          min-width: 240px;
+                          flex-direction: column;
+                          width: 450px;
+                          margin: auto 0;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .clinic-card {
+                            max-width: 100%;
+                          }
+                        }
+                        
+                        .clinic-content {
+                          border-radius: 20px;
+                          background-color: #f5f8ff;
+                          display: flex;
+                          width: 100%;
+                          flex-direction: column;
+                          align-items: center;
+                          padding: 22px 45px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .clinic-content {
+                            max-width: 100%;
+                            padding: 0 20px;
+                          }
+                        }
+                        
+                        .clinic-title {
+                          color: #303030;
+                          text-align: center;
+                          font-size: 24px;
+                          line-height: 31px;
+                          align-self: start;
+                          width: 249px;
+                        }
+                        
+                        .clinic-icon {
+                          aspect-ratio: 0.97;
+                          object-fit: contain;
+                          object-position: center;
+                          width: 116px;
+                          margin-top: 31px;
+                          max-width: 100%;
+                        }
+                        
+                        .clinic-link {
+                          display: flex;
+                          margin-top: 64px;
+                          align-items: center;
+                          gap: 16px;
+                          font-size: 18px;
+                          color: #4d2c19;
+                          line-height: 1.3;
+                          justify-content: start;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .clinic-link {
+                            margin-top: 40px;
+                          }
+                        }
+                        
+                        .link-text {
+                          text-decoration-line: underline;
+                          align-self: stretch;
+                          margin: auto 0;
+                        }
+                        
+                        .link-icon {
+                          aspect-ratio: 1.33;
+                          object-fit: contain;
+                          object-position: center;
+                          width: 20px;
+                          stroke-width: 2px;
+                          stroke: #ea7d28;
+                          align-self: stretch;
+                          margin: auto 0;
+                        }
+                        
+                        .doctors-card {
+                          align-self: stretch;
+                          display: flex;
+                          min-width: 240px;
+                          flex-direction: column;
+                          width: 450px;
+                          margin: auto 0;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .doctors-card {
+                            max-width: 100%;
+                          }
+                        }
+                        
+                        .doctors-content {
+                          border-radius: 20px;
+                          background-color: #e1f2ee;
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          padding: 21px 45px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .doctors-content {
+                            max-width: 100%;
+                            padding: 0 20px;
+                          }
+                        }
+                        
+                        .doctors-info {
+                          display: flex;
+                          flex-direction: column;
+                        }
+                        
+                        .doctors-title {
+                          color: #303030;
+                          text-align: center;
+                          font-size: 24px;
+                          line-height: 31px;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .doctors-title {
+                            margin-right: 3px;
+                          }
+                        }
+                        
+                        .doctors-icon {
+                          aspect-ratio: 1.03;
+                          object-fit: contain;
+                          object-position: center;
+                          width: 124px;
+                          align-self: center;
+                          margin-top: 49px;
+                          max-width: 100%;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .doctors-icon {
+                            margin-top: 40px;
+                          }
+                        }
+                        
+                        .doctors-link {
+                          display: flex;
+                          margin-top: 49px;
+                          align-items: center;
+                          gap: 16px;
+                          font-size: 18px;
+                          color: #4d2c19;
+                          line-height: 1.3;
+                          justify-content: start;
+                        }
+                        
+                        @media (max-width: 991px) {
+                          .doctors-link {
+                            margin-top: 40px;
+                          }
+                        }
+                        
+                        .visually-hidden {
+                          position: absolute;
+                          width: 1px;
+                          height: 1px;
+                          padding: 0;
+                          margin: -1px;
+                          overflow: hidden;
+                          clip: rect(0, 0, 0, 0);
+                          white-space: nowrap;
+                          border: 0;
+                        }
+                        </style>
+                        
+                        <section class="expert-guidance">
+                          <div class="consultation-card">
+                            <header class="card-header">
+                              <h2 class="card-title">Expert Guidance for <br /> Healthy Smiles</h2>
+                              <p class="card-subtitle">Contact Now</p>
+                            </header>
+                            <form class="consultation-form">
+                              <div class="form-group">
+                                <div class="input-wrapper">
+                                  <label for="name" class="input-label">Name</label>
+                                  <input type="text" id="name" class="form-input" value="Amit Rana" />
+                                </div>
+                                <div class="input-wrapper">
+                                  <label for="mobile" class="input-label visually-hidden">Mobile Number</label>
+                                  <input type="tel" id="mobile" class="form-input" placeholder="Mobile Number" />
+                                </div>
+                                <div class="select-wrapper">
+                                  <div class="select-container">
+                                    <label for="concern" class="visually-hidden">Select Concern</label>
+                                    <select id="concern" aria-label="Select Concern">
+                                      <option value="">Select Concern</option>
+                                    </select>
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff37a7ffed2f3963ab9761885d3e137691cf86142398e702f67ad7d4ad89b14a?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="select-icon" />
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="submit" class="submit-button">Book A Free Consultation</button>
+                            </form>
+                          </div>
+                          <div class="safety-protocols">
+                            <div class="protocols-container">
+                              <div class="protocols-content">
+                                <div class="protocols-text">
+                                  <header class="protocols-header">
+                                    <h2 class="protocols-title">10x Safety Protocols</h2>
+                                  </header>
+                                  <div class="protocols-details">
+                                    <div class="dori-info">
+                                      <p class="dori-title">Monitored by DORI</p>
+                                      <p class="dori-subtitle">(Artificial Intelligence System)</p>
+                                    </div>
+                                    <p class="protocol-item">with UV light sterilized equipment at all clinics</p>
+                                    <p class="protocol-item">Reverse osmosis (RO) Filtration System to ensure safest water supply.</p>
+                                    <div class="dori-info">
+                                      <p class="dori-title">Monitored by DORI</p>
+                                      <p class="dori-subtitle">(Artificial Intelligence System)</p>
+                                    </div>
+                                  </div>
+                                  <div class="learn-more-link">
+                                    <a href="#" class="learn-more-text">Learn More</a>
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f8a5dcbc81dca033007eeae540d55a872c45d8620ab4f7c3580c1bb92b9f507?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="learn-more-icon" />
+                                  </div>
+                                </div>
+                                <div class="protocols-image">
+                                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/93007ab12cf00b53c55ea2c69e21f9a45caa962f3bae5403917690e9f9b46b8f?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Safety protocols illustration" class="protocols-img" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="info-cards">
+                              <article class="clinic-card">
+                                <div class="clinic-content">
+                                  <h3 class="clinic-title">450+ Neighbourhood <br /> <span style="font-weight: 400; font-size: 20px">Clinics Pan India</span></h3>
+                                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/65b2699d382d9bcd46ff24f7037d9be3dc53e3ef410b7def2d3d5547dbb18132?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Clinic locations" class="clinic-icon" />
+                                  <div class="clinic-link">
+                                    <a href="#" class="link-text">Locate Clinic near you</a>
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeafd450694cbb2cd36cb5e59a7096ce12b4f983366a9e127a3226cf7be96fc4?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="link-icon" />
+                                  </div>
+                                </div>
+                              </article>
+                              <article class="doctors-card">
+                                <div class="doctors-content">
+                                  <div class="doctors-info">
+                                    <h3 class="doctors-title">1200+ Expert Doctors <br /> <span style="font-weight: 400; font-size: 20px">Covering All Specialities</span></h3>
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/63067aae264cd02d50cb23f08c61735e7d8f7be809263c3ed0a3dbc3bba06df9?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="Doctors illustration" class="doctors-icon" />
+                                    <div class="doctors-link">
+                                      <a href="#" class="link-text">Explore Dentists Nearby</a>
+                                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeafd450694cbb2cd36cb5e59a7096ce12b4f983366a9e127a3226cf7be96fc4?placeholderIfAbsent=true&apiKey=1bcbd0467ca245ba91f8a88c4bf711bd" alt="" class="link-icon" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </article>
+                            </div>
+                          </div>
+                        </section>
+
+</body>
+</html>
